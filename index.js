@@ -4,12 +4,15 @@ const layouts     = require('metalsmith-layouts');
 const markdown    = require('metalsmith-markdown');
 const permalinks  = require('metalsmith-permalinks');
 const less        = require('metalsmith-less');
+const snippet     = require('metalsmith-snippet');
 
 metalsmith(__dirname)
   .metadata({
     sitename: 'Don McCurdy',
-    siteurl: 'http://www.donmccurdy.com/',
-    sitedescription: 'Developer on Project Sunroof, at Google. Working on climate change, data visualization, graphics, and WebVR.'
+    siteurl: 'https://www.donmccurdy.com/',
+    sitedescription: 'Developer on Project Sunroof, at Google. Working on climate change, data visualization, graphics, and WebVR.',
+    metatitle: 'my title blbrbrbrbr',
+    metadescription: 'blrb blrbb blrub'
   })
   .source('./src')
   .destination('./build')
@@ -27,17 +30,18 @@ metalsmith(__dirname)
     }
   }))
   .use(markdown())
+  .use(snippet({maxLength: 200}))
   .use(permalinks({
     relative: false,
     date: 'YYYY/MM/DD',
     linksets: [
       {
         match: {collection: 'posts'},
-        pattern: ':date/:slug'
+        pattern: ':date/:slug/'
       },
       {
         match: {collection: 'drafts'},
-        pattern: '_drafts/:title'
+        pattern: '_drafts/:slug/'
       }
     ]
   }))

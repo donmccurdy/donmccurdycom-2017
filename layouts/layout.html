@@ -2,9 +2,34 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>{{sitename}}{% if title %} | {{ title }}{% endif %}</title>
-  <meta name="description" content="{{ sitedescription }}">
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+  <title>{{ title || sitename}}</title>
+  <meta name="description" content="{{ snippet || sitedescription }}">
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+
   <link rel="stylesheet" href="/assets/css/screen.css">
+
+  <link rel="canonical" href="{{ siteurl + path }}" />
+  <meta name="referrer" content="no-referrer-when-downgrade" />
+
+  <meta property="og:site_name" content="{{ sitename }}" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="{{ title || sitename }}" />
+  <meta property="og:description" content="{{ snippet || sitedescription }}" />
+  <meta property="og:url" content="{{ siteurl + path }}" />
+  {% if date %}<meta property="article:published_time" content="{{ date | date(YYYY-MM-DDD) }}" />{% endif %}
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="{{ title || sitename }}" />
+  <meta name="twitter:description" content="{{ snippet || sitedescription }}" />
+  <meta name="twitter:url" content="{{ siteurl + path }}" />
+  <meta name="twitter:label1" content="Written by" />
+  <meta name="twitter:data1" content="Don McCurdy" />
+  <meta name="twitter:site" content="@donrmccurdy" />
+  <meta name="twitter:creator" content="@donrmccurdy" />
 </head>
 <body>
 
