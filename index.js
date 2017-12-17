@@ -3,7 +3,6 @@ const collections = require('metalsmith-collections');
 const layouts     = require('metalsmith-layouts');
 const markdown    = require('metalsmith-markdown');
 const permalinks  = require('metalsmith-permalinks');
-const slug        = require('metalsmith-slug');
 
 metalsmith(__dirname)
   .metadata({
@@ -21,9 +20,12 @@ metalsmith(__dirname)
       reverse: true
     }
   }))
-  .use(slug())
   .use(markdown())
-  .use(permalinks({relative: false}))
+  .use(permalinks({
+    relative: false,
+    date: 'YYYY/MM/DD',
+    pattern: ':date/:slug'
+  }))
   .use(layouts({engine: 'swig'}))
   .build((err) => {
     if (err) throw err;
