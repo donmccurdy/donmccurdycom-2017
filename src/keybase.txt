@@ -1,0 +1,80 @@
+==================================================================
+https://keybase.io/donmccurdy
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://www.donmccurdy.com
+  * I am donmccurdy (https://keybase.io/donmccurdy) on keybase.
+  * I have a public key with fingerprint 5F37 223F AA10 6848 06F7  5B7D 843F 566D 1AD4 B332
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "0101daef43cd46f1da79a51da20350a00d3b9c4a42e91f5491ae813987be91dc58d50a",
+            "fingerprint": "5f37223faa10684806f75b7d843f566d1ad4b332",
+            "host": "keybase.io",
+            "key_id": "843f566d1ad4b332",
+            "kid": "0101daef43cd46f1da79a51da20350a00d3b9c4a42e91f5491ae813987be91dc58d50a",
+            "uid": "115ccc09ff1baa0079b4e2770d791500",
+            "username": "donmccurdy"
+        },
+        "revoke": {
+            "sig_ids": [
+                "7d7f11ac463131aabffbf5aac54a80b617a684fe24905bccf5edaf6b6c2dec1f0f"
+            ]
+        },
+        "service": {
+            "hostname": "www.donmccurdy.com",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1491805194,
+    "expire_in": 157680000,
+    "prev": "cb6ac2d028bc1081a362761ef507f8fa44febcec89d73c0e7585adad36adbeeb",
+    "seqno": 19,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.68
+Comment: https://keybase.io/crypto
+
+yMOAAnicrVJ7UFRVHF4EFTHiYUCaNXohZZLovh9rub6Ghw2CTKUNCZ577zl4Y3cv
+3V2egjjqYOn4R9HkTBtTOxHySKBhgNIlxShsGFIwQmLsCY1JxHsQIegsY9M//dn5
+53ce3/f9vvOd0x7oawrwOWl5ybbu20bap7NtPsd0YDgq4Agh62oBYT5CZMGlAq0q
+dDgzsjSVMBMkRVIqgIhlFJXlEZ4LEuBwoUmGIwFJqowsKSxgaShRiGMlCkCRYiRR
+kPGGqnCiimFEDIE0eyY0sg3N7sSyHGIEmmYQABTJi6xI8kjgZEEVWQZxPK9SQGVl
+hqEx8bDu8DKwORk4YKym4z28yFiy9x/4/9l3zpIcRXGKopASQpQMMFuQZBbSgkCq
+gkRxJOkFOqBhBzaI0aputylKjoFjLY4hDJirZ0Fvsg4tE9t2EOY0QlAFRFFAYXmG
+YigAZIRkxAGgcCwQSZmnBIBzQZBmJZKTFQVxUAWIl3mFVqFCIRIRB7E27pmrKUvi
+3pwe9M/Ly4v910Osotuwv2xDd+qKbsXnh53ObIfZ681ZkL1EgHLGA6kMWbOr+K0w
+IxcaDk23E2YKIxWn5tWmcFIiyVESG0PA/GzNgBmaF8EJvEji4e0Dc7GkIvMAeyVp
+UVYoUqQAw9MCT0HEkQISEWDx5WQFKqKkCoxCQoETOaACleGBKkMoE97LvWbXsbaE
+fYJMrInzswNnjgGJ4qttr/iZfAJMK5Yv835iU8Cq4H++tjgXtBhfXk05uqu2Pxnz
+8L3wvh0P3S+vr0kKuj72avK23sCmmcFVnTpNpL/nvvm+j3r0RHJsDaFcHOmfPFcX
+8czauIgE3w3hU5Ft+T9sd6WXzkd0eTzGb34nfY+5C6f/uPt910yHr7MkzJO6jDB1
+XSxdccUU5EnNqr62a2DoeAWoXP/21ABoGKmsyT1eunjpduDcYHmt/+mhuTVbe1Q9
+KF2yvBx49oSt9ZNfzcwHBYcuxI92GrM294IrrDH+KBtiSjdZN9o2TI3to93w1Ma6
+tLtJritJHYHtTA4yWRqebzof8FZR/eTAjaf2j9pXd0+nGC0/7V9w7Z1M23L+OhTo
+/uZ1O5Nt0QfHRtbWv1F0WXhCWz9g9//uS8unz+54JOTcgY7Rpi96Z32a74XE0Slh
+m8o+sk6ghMm9DUNnoj4udq70vJ4Y6iZa26t3b73/2Dt138zunF/Tvrv2w/m4snEh
+N6R/9fLQN9muq9bS7pkztyK5XZYQd9HKyB97F+4c8wneZLtxuWWiQpxJND1+27Hl
+WvtZ8mf700PRvxc+euHPqq9d/NTN4cJj7xaOJ+4JXtxcYE4l0/2N/P59LeFVJf2H
+EvKba6NrJ0rC/JoyPHvSuL6ewTLrnPFc63xKlxHX+JmlZ5tsCa8d/2v4Vt8l/9MF
+454ud7+r7dSdKG2zNa/gc1TyYuVXgRWhLzD26V/+BlVy5MY=
+=7IwJ
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/donmccurdy
+
+==================================================================
