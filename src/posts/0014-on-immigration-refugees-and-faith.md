@@ -5,7 +5,7 @@ date: 2017-01-30 01:38:00
 layout: post.html
 ---
 
-![Protest in Copley Square, January 29 2017.](/content/images/2017/01/IMG_4913.JPG)
+![Protest in Copley Square, January 29 2017.](/assets/images/2017/01/IMG_4913.JPG)
 *Photo: #NoBanNoWall protest in Copley Square, January 29 2017.*
 
 The executive branch of the U.S. government has just stopped entry of refugees for 120 days, and stopped admission of Syrian refugees indefinitely, claiming: “that the entry of nationals of Syria as refugees is detrimental to the interests of the United States” [<a href="#citations">1</a>].

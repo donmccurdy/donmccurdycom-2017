@@ -18,13 +18,27 @@ metalsmith(__dirname)
       pattern: 'posts/*.md',
       sortBy: 'date',
       reverse: true
+    },
+    drafts: {
+      pattern: 'drafts/*.md',
+      sortBy: 'date',
+      reverse: true
     }
   }))
   .use(markdown())
   .use(permalinks({
     relative: false,
     date: 'YYYY/MM/DD',
-    pattern: ':date/:slug'
+    linksets: [
+      {
+        match: {collection: 'posts'},
+        pattern: ':date/:slug'
+      },
+      {
+        match: {collection: 'drafts'},
+        pattern: '_drafts/:title'
+      }
+    ]
   }))
   .use(layouts({engine: 'swig'}))
   .build((err) => {

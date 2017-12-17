@@ -7,7 +7,7 @@ layout: post.html
 
 ## Google
 
-![Project Sunroof screenshot](/content/images/2016/11/Sunroof_Image_1__IxqDupI.width-1000.jpg)
+![Project Sunroof screenshot](/assets/images/2016/11/Sunroof_Image_1__IxqDupI.width-1000.jpg)
 
 **Project Sunroof** ([google.com/sunroof](https://www.google.com/get/sunroof)) is a free, public tool for estimating the amount of renewable electricity that a home — or an entire city — could generate with solar panels. Project Sunroof uses machine learning to find feasible locations for solar panels on a roof. Then, the tool estimates electrical generation using historical weather, shadows from trees and obstacles, and locally applicable tax incentives.
 
@@ -19,7 +19,7 @@ The online [data explorer](https://www.google.com/get/sunroof/data-explorer/) pr
 
 ## Graphiq
 
-![Graphiq screenshot](/content/images/2016/11/Screen-Shot-2016-11-27-at-11.28.47-PM.png)
+![Graphiq screenshot](/assets/images/2016/11/Screen-Shot-2016-11-27-at-11.28.47-PM.png)
 
 **Graphiq** ([graphiq.com](https://www.graphiq.com)) is a platform for managing, exploring, and visualizing data. Graphiq provides a network of datasets and web applications featuring search, context-rich visualizations, filtering, and interactive tools available to journalists, researchers, and the general public.
 
