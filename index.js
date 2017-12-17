@@ -1,24 +1,20 @@
-var metalsmith  = require('metalsmith');
-var collections = require('metalsmith-collections');
-var layouts     = require('metalsmith-layouts');
-var markdown    = require('metalsmith-markdown');
-var permalinks  = require('metalsmith-permalinks');
-var slug        = require('metalsmith-slug');
-
-// var drafts = require('metalsmith-drafts');
+const metalsmith  = require('metalsmith');
+const collections = require('metalsmith-collections');
+const layouts     = require('metalsmith-layouts');
+const markdown    = require('metalsmith-markdown');
+const permalinks  = require('metalsmith-permalinks');
+const slug        = require('metalsmith-slug');
 
 metalsmith(__dirname)
   .metadata({
     sitename: 'Don McCurdy',
     siteurl: 'http://www.donmccurdy.com/',
-    description: 'Developer on Project Sunroof, at Google. Working on climate change, data visualization, graphics, and WebVR.',
-    generatorname: 'Metalsmith',
-    generatorurl: 'http://metalsmith.io/'
+    sitedescription: 'Developer on Project Sunroof, at Google. Working on climate change, data visualization, graphics, and WebVR.'
   })
   .source('./src')
   .destination('./build')
-  .clean(true)                // clean destination before
-  .use(collections({          // group all blog posts by internally
+  .clean(true)
+  .use(collections({
     posts: {
       pattern: 'posts/*.md',
       sortBy: 'date',
