@@ -231,6 +231,15 @@ blockquote {
     background-image: none;
 }
 
+time {
+    font-family: @baseFontFamily;
+    font-size: 1.2rem;
+    font-style: italic;
+    color: @baseFontColor;
+    display: block;
+    margin: 1em 0;
+}
+
 h2 {
     font-family: @secondaryFontFamily;
     font-size: 2em;
@@ -244,6 +253,22 @@ h2 {
     display: block;
     margin: 0 auto;
     max-width: 100%;
+}
+
+.index-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.index-list li {
+    padding-left: 0;
+    margin-bottom: 2em;
+
+    &:last-child { margin-bottom: 0; }
+
+    .date {
+        color: #AAA;
+    }
 }
 
 section.post-excerpt .read-more {

@@ -3,6 +3,7 @@ title: Recommendations
 slug: favorites
 date: 2015-05-18 04:00:00
 layout: post.html
+snippet: A short list of things I enjoy, to be updated at undisclosed and inconsistent intervals.
 ---
 
 A short list of things I enjoy, to be updated at undisclosed and inconsistent intervals.

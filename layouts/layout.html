@@ -21,7 +21,7 @@
   <meta property="og:title" content="{{ title || sitename }}" />
   <meta property="og:description" content="{{ snippet || sitedescription }}" />
   <meta property="og:url" content="{{ siteurl + path }}" />
-  {% if date %}<meta property="article:published_time" content="{{ date | date(YYYY-MM-DDD) }}" />{% endif %}
+  {% if date %}<meta property="article:published_time" content="{{ date.toISOString() }}" />{% endif %}
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="{{ title || sitename }}" />
   <meta name="twitter:description" content="{{ snippet || sitedescription }}" />

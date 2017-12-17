@@ -3,6 +3,7 @@ title: Gamepad Support on the Web
 slug: gamepad-support-on-the-web
 date: 2017-01-25 16:57:10
 layout: post.html
+snippet: Overviews state of the Gamepad API on the web, as of early 2017.
 ---
 
 ## Desktop

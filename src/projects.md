@@ -2,7 +2,7 @@
 title: Projects
 slug: projects
 date: 2016-05-22 02:46:03
-layout: post.html
+layout: page.html
 ---
 
 ## Google

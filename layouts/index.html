@@ -2,9 +2,13 @@
 
 {% block body %}
 <h2>Posts</h2>
-<ol>
+<ol class="index-list">
   {% for post in posts %}
-  <li><a href="{{post.path}}">{{post.title}}</a></li>
+  <li>
+    <a href="{{post.path}}">{{post.title}}</a>,
+    <i>{{ post.date | date('F d, Y') }}</i>.
+    {{ post.snippet | safe }}
+  </li>
   {% endfor %}
 </ol>
 {% endblock %}
