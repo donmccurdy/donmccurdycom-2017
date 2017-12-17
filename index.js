@@ -3,6 +3,7 @@ const collections = require('metalsmith-collections');
 const layouts     = require('metalsmith-layouts');
 const markdown    = require('metalsmith-markdown');
 const permalinks  = require('metalsmith-permalinks');
+const less        = require('metalsmith-less');
 
 metalsmith(__dirname)
   .metadata({
@@ -41,6 +42,10 @@ metalsmith(__dirname)
     ]
   }))
   .use(layouts({engine: 'swig'}))
+  .use(less({
+    pattern: 'assets/css/*.less',
+    render: { paths: ['src/assets/css'] },
+  }))
   .build((err) => {
     if (err) throw err;
   });

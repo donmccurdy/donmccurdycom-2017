@@ -1,8 +1,7 @@
 {% extends "layout.html" %}
 
 {% block body %}
-<p>{{sitedescription}}</p>
-
+<h2>Posts</h2>
 <ol>
   {% for post in posts %}
   <li><a href="{{post.path}}">{{post.title}}</a></li>

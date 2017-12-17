@@ -4,6 +4,7 @@
 
 @import url('//fonts.googleapis.com/css?subset=latin,cyrillic-ext,latin-ext,cyrillic&family=Open+Sans+Condensed:300|Open+Sans:400,600,400italic,600italic|Merriweather:400,300,300italic,400italic,700,700italic|Roboto+Slab:400,300');
 @import url('//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css');
+@import "normalize.less";
 @import (reference) "mixins.less";
 
 // Variables
@@ -238,8 +239,8 @@ h2 {
     text-transform: uppercase;
 }
 
-section.post-content img,
-section.post-excerpt img {
+.content img,
+.content img {
     display: block;
     margin: 0 auto;
     max-width: 100%;
@@ -534,5 +535,5 @@ hr {
     border: 0;
     height: 1px;
     background: @borderColor;
-    margin: 6em 0;
+    margin: 4em 0;
 }

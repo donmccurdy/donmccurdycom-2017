@@ -4,20 +4,40 @@
   <meta charset="UTF-8" />
   <title>{{sitename}}{% if title %} | {{ title }}{% endif %}</title>
   <meta name="description" content="{{ sitedescription }}">
+  <link rel="stylesheet" href="/assets/css/screen.css">
 </head>
 <body>
-  <header>
-    <h1><a href="{{siteurl}}">{{ sitename }}</a></h1>
-    <nav>
-      <a href="/">Blog</a>
-      <a href="/projects/">Projects</a>
-      <a href="https://twitter.com/donrmccurdy">Twitter</a>
-      <a href="https://github.com/donmccurdy">GitHub</a>
-    </nav>
+
+  <header id="site-head">
+
+    <h1 class="blog-title"><a href="{{siteurl}}">{{sitename}}</a></h1>
+    <div class="header-col">
+
+      {% if isIndex %}
+      <p class="blog-description">{{sitedescription}}</p>
+      {% endif %}
+
+      <nav class="menu" role="nav">
+        <ul>
+            <li class="nav-blog">
+              <a href="/">Blog</a>
+            </li>
+            <li class="nav-projects">
+              <a href="/projects/">Projects</a>
+            </li>
+          <li><a href="https://twitter.com/donrmccurdy" target="_blank" aria-label="Twitter"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="https://github.com/donmccurdy" target="_blank" aria-label="GitHub"><i class="fa fa-github"></i></a></li>
+        </ul>
+      </nav>
+
+    </div>
   </header>
 
-
-  {% block body %}{% endblock %}
+  <main class="content">
+    <article class="post">
+      {% block body %}{% endblock %}
+    </article>
+  </main>
 
   <footer>
     <a href="http://creativecommons.org/publicdomain/zero/1.0/">Creative Commons CC0</a>, 2017
