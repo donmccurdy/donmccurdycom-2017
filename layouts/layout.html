@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>{{ title }}</title>
+  <meta name="description" content="{{ description }}">
+</head>
+<body>
+  <header>
+    <h1><a href="{{siteurl}}">{{ sitename }}</a></h1>
+    <nav>
+      <a href="/">Blog</a>
+      <a href="/projects/">Projects</a>
+      <a href="https://twitter.com/donrmccurdy">Twitter</a>
+      <a href="https://github.com/donmccurdy">GitHub</a>
+    </nav>
+  </header>
+
+
+  {% block body %}{% endblock %}
+
+  <footer>
+    <a href="http://creativecommons.org/publicdomain/zero/1.0/">Creative Commons CC0</a>, 2017
+  </footer>
+
+</body>
+</html>

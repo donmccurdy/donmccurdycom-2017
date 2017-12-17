@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<p>Developer on Project Sunroof, at Google. Working on climate change, data visualization, graphics, and WebVR.</p>
+
+<ol>
+  {% for post in posts %}
+  <li><a href="{{post.path}}">{{post.title}}</a></li>
+  {% endfor %}
+</ol>
+{% endblock %}
