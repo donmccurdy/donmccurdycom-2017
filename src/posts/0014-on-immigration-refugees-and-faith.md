@@ -1,7 +1,7 @@
 ---
 title: On Immigration, Refugees, and Faith
 slug: on-immigration-refugees-and-faith
-date: 2017-01-30 01:38:00
+date: 2017-01-29 01:38:00
 layout: post.html
 snippet: The executive branch of the U.S. government has just stopped entry of refugees for 120 days, and stopped admission of Syrian refugees…
 ---
