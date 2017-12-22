@@ -8,6 +8,7 @@
     "url": "git://github.com/donmccurdy/blog-metalsmith.git"
   },
   "scripts": {
+    "dev": "watch-exec -w src -c \"npm run build\" & watch-exec -w layouts -c \"npm run build\" & serve build",
     "build": "node index.js",
     "deploy": "npm run build && now build --static --name blog && now alias",
     "postversion": "git push && git push --tags && npm publish"
@@ -27,6 +28,13 @@
   },
   "now": {
     "name": "blog",
-    "alias": "www.donmccurdy.com"
+    "alias": [
+      "www.donmccurdy.com",
+      "donmccurdy.com"
+    ]
+  },
+  "devDependencies": {
+    "serve": "^6.4.3",
+    "watch-exec": "^1.2.2"
   }
 }

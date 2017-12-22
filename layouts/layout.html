@@ -44,10 +44,10 @@
 
       <nav class="menu" role="nav">
         <ul>
-            <li class="nav-blog">
+            <li {% if isIndex %}class="active"{% endif %}>
               <a href="/">Blog</a>
             </li>
-            <li class="nav-projects">
+            <li {% if isProjects %}class="active"{% endif %}>
               <a href="/projects/">Projects</a>
             </li>
           <li><a href="https://twitter.com/donrmccurdy" target="_blank" aria-label="Twitter"><i class="fa fa-twitter"></i></a></li>
