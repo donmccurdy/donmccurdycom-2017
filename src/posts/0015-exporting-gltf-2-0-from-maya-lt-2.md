@@ -5,7 +5,7 @@ date: 2017-06-27 17:02:32
 layout: post.html
 ---
 
-This post will walk through the process of exporting an animated [glTF 2.0](https://www.khronos.org/news/press/khronos-releases-gltf-2.0-specification) model from Maya LT. We''ll use the following tools:
+This post will walk through the process of exporting an animated [glTF 2.0](https://www.khronos.org/news/press/khronos-releases-gltf-2.0-specification) model from Maya LT. We’ll use the following tools:
 
 * [Maya LT](https://www.autodesk.com/products/maya-lt/overview)
 * [FBX Converter 2013.3](http://usa.autodesk.com/adsk/servlet/pc/item?siteID=123112&id=22694909)
@@ -16,19 +16,19 @@ All of these are available for Windows or macOS. As of this writing, the most re
 
 The post _does not_ cover how to create PBR materials — a follow-up post will go into texturing with [Substance Painter](https://www.allegorithmic.com/products/substance-painter) and exporting PBR metal/rough assets.
 
-For an alternative workflow using Blender and COLLADA2GLTF, you may want to try with Diego Goberna''s excellent article, [glTF Workflow for A-Saturday-Night](https://blog.mozvr.com/a-saturday-night-gltf-workflow/), instead.
+For an alternative workflow using Blender and COLLADA2GLTF, you may want to try with Diego Goberna’s excellent article, [glTF Workflow for A-Saturday-Night](https://blog.mozvr.com/a-saturday-night-gltf-workflow/), instead.
 
 **1. Clean up the model for export.**
 
 Optional steps to clean up geometry and history.
 
 i. *Mesh* → *Cleanup*
-ii. *Edit* → *Delete All by Type* → *History*, to clean up the model **ONLY** if the model is not animated. If you''re animating the model yourself, do this step before animating, or skip it entirely.
+ii. *Edit* → *Delete All by Type* → *History*, to clean up the model **ONLY** if the model is not animated. If you’re animating the model yourself, do this step before animating, or skip it entirely.
 iii. *Modify* → *Freeze Transformations*
 
 **2. Export in FBX 2013 format from Maya.**
 
-The FBX Converter used in step 3 hasn''t been updated since 2013. Accordingly, we need to export from Maya LT in the FBX 2013 format. Steps:
+The FBX Converter used in step 3 hasn’t been updated since 2013. Accordingly, we need to export from Maya LT in the FBX 2013 format. Steps:
 
 i. *File* → *Export All...*
 ii. Select *Animation* and *Bake Animation*
@@ -58,6 +58,6 @@ v. Export.
 
 **6. Test with glTF viewer.**
 
-Drag the `.gltf` or `.glb` file — and all other generated files, including `.bin` — into https://gltf-viewer.donmccurdy.com/ to preview them in three.js. If something is wrong, test the file on the [glTF Validator](http://github.khronos.org/glTF-Validator/). Invalid files should be reported as GitHub issues on the Blender exporter. If the file appears valid but isn''t appearing correctly, please [report an issue on the viewer tool](https://github.com/donmccurdy/three-gltf-viewer/issues/new).
+Drag the `.gltf` or `.glb` file — and all other generated files, including `.bin` — into https://gltf-viewer.donmccurdy.com/ to preview them in three.js. If something is wrong, test the file on the [glTF Validator](http://github.khronos.org/glTF-Validator/). Invalid files should be reported as GitHub issues on the Blender exporter. If the file appears valid but isn’t appearing correctly, please [report an issue on the viewer tool](https://github.com/donmccurdy/three-gltf-viewer/issues/new).
 
 Assuming you made it this far, you have a valid glTF 2.0 asset. Congratulations! You can now use the model in [three.js](https://threejs.org/docs/#examples/loaders/GLTF2Loader), [A-Frame](https://aframe.io/docs/0.5.0/components/gltf-model.html), [Babylon.js](https://github.com/BabylonJS/Babylon.js/tree/master/loaders/src/glTF), and [other WebGL engines](https://github.com/KhronosGroup/glTF#loaders-and-viewers).
