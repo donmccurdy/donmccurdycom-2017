@@ -1,18 +1,19 @@
 const metalsmith  = require('metalsmith');
 const collections = require('metalsmith-collections');
 const layouts     = require('metalsmith-layouts');
+const less        = require('metalsmith-less');
 const markdown    = require('metalsmith-markdown');
 const permalinks  = require('metalsmith-permalinks');
-const less        = require('metalsmith-less');
+const rss         = require('metalsmith-feed');
 const snippet     = require('metalsmith-snippet');
 
 metalsmith(__dirname)
   .metadata({
-    sitename: 'Don McCurdy',
-    siteurl: 'https://www.donmccurdy.com/',
-    sitedescription: 'Developer on Project Sunroof, at Google. Working on climate change, data visualization, graphics, and WebVR.',
-    metatitle: 'my title blbrbrbrbr',
-    metadescription: 'blrb blrbb blrub'
+    site: {
+      title: 'Don McCurdy',
+      url: 'https://www.donmccurdy.com/',
+      description: 'Developer on Project Sunroof, at Google. Working on climate change, data visualization, graphics, and WebVR.',
+    }
   })
   .source('./src')
   .destination('./build')
@@ -45,6 +46,7 @@ metalsmith(__dirname)
       }
     ]
   }))
+  .use(rss({collection: 'posts'}))
   .use(layouts({engine: 'swig'}))
   .use(less({
     pattern: 'assets/css/*.less',

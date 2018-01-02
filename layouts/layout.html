@@ -5,27 +5,27 @@
   <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-  <title>{{ title || sitename}}</title>
-  <meta name="description" content="{{ snippet || sitedescription }}">
+  <title>{{ title || site.title }}</title>
+  <meta name="description" content="{{ snippet || site.description }}">
   <meta name="HandheldFriendly" content="True" />
   <meta name="MobileOptimized" content="320" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
 
   <link rel="stylesheet" href="/assets/css/screen.css">
 
-  <link rel="canonical" href="{{ siteurl + path }}" />
+  <link rel="canonical" href="{{ site.url + path }}" />
   <meta name="referrer" content="no-referrer-when-downgrade" />
 
-  <meta property="og:site_name" content="{{ sitename }}" />
+  <meta property="og:site_name" content="{{ site.title }}" />
   <meta property="og:type" content="article" />
-  <meta property="og:title" content="{{ title || sitename }}" />
-  <meta property="og:description" content="{{ snippet || sitedescription }}" />
-  <meta property="og:url" content="{{ siteurl + path }}" />
+  <meta property="og:title" content="{{ title || site.title }}" />
+  <meta property="og:description" content="{{ snippet || site.description }}" />
+  <meta property="og:url" content="{{ site.url + path }}" />
   {% if date %}<meta property="article:published_time" content="{{ date.toISOString() }}" />{% endif %}
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="{{ title || sitename }}" />
-  <meta name="twitter:description" content="{{ snippet || sitedescription }}" />
-  <meta name="twitter:url" content="{{ siteurl + path }}" />
+  <meta name="twitter:title" content="{{ title || site.title }}" />
+  <meta name="twitter:description" content="{{ snippet || site.description }}" />
+  <meta name="twitter:url" content="{{ site.url + path }}" />
   <meta name="twitter:label1" content="Written by" />
   <meta name="twitter:data1" content="Don McCurdy" />
   <meta name="twitter:site" content="@donrmccurdy" />
@@ -35,11 +35,11 @@
 
   <header id="site-head">
 
-    <h1 class="blog-title"><a href="{{siteurl}}">{{sitename}}</a></h1>
+    <h1 class="blog-title"><a href="{{ site.url }}">{{ site.title }}</a></h1>
     <div class="header-col">
 
       {% if isIndex %}
-      <p class="blog-description">{{sitedescription}}</p>
+      <p class="blog-description">{{ site.description }}</p>
       {% endif %}
 
       <nav class="menu" role="nav">
