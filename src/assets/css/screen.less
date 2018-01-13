@@ -263,6 +263,24 @@ h2 {
 
 figure {
     margin: 3em auto;
+
+    &.width-full {
+        width: 100vw;
+        position: relative;
+        left: 50%;
+        right: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+    }
+
+    &.width-large {
+        width: 180%;
+        position: relative;
+        left: 50%;
+        right: 50%;
+        margin-left: -90%;
+        margin-right: -90%;
+    }
 }
 
 figcaption {
@@ -270,6 +288,15 @@ figcaption {
     font-family: @baseFontFamily;
     font-style: italic;
     margin-top: 1em;
+}
+
+@media only screen and (max-width: 1324px) {
+    figure.width-large {
+        width: 100%;
+        position: static;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 /* Index */
@@ -584,6 +611,8 @@ hr {
 
 /* Media */
 
-twitterwidget {
+/** todo just pust the video */
+twitterwidget,
+.twitter-tweet {
     margin: 0 auto;
 }

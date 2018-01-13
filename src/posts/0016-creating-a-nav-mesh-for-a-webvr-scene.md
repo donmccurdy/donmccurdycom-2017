@@ -119,7 +119,7 @@ exporter](https://github.com/KhronosGroup/glTF-Blender-Exporter/) choosing
 *Export selected only*. For a 2MB scene, this navigation mesh is about 8KB.
 Here’s my result in the glTF Viewer:
 
-<figure>
+<figure class="width-full">
     <img src="/assets/images/2017/08/final_nav_mesh.png" alt="Final navigation mesh, of polygons along the walkable areas of the mesh, in an online glTF viewer.">
     <figcaption>Final navigation mesh, exported to glTF.</figcaption>
 </figure>

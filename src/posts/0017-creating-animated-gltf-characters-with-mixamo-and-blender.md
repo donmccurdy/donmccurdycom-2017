@@ -115,7 +115,7 @@ make sure things look OK. Steps:
 
 * Play animation in the Blender’s footer.
 
-<figure>
+<figure class="width-large">
   <img src="/assets/images/2017/11/play_anim.png" alt="Play animation in the Blender footer.">
   <figcaption>Play animation in the Blender footer.</figcaption>
 </figure>
@@ -136,10 +136,9 @@ original model in the next few steps.*
 * After selecting the character, try playing different Actions (there will be one
 Action for each animation, plus the T-Pose).
 
-I walk through the four steps above in this 30-second screen capture:
-
-<figure>
+<figure class="width-large">
   <video controls="controls" src="/assets/images/2017/11/action_preview.mov"></video>
+  <figcaption>Walk through the four steps above in this 30-second screen capture.</figcaption>
 </figure>
 
 > **TIP:** If you don’t see the option to select an animation, make sure that you
@@ -195,7 +194,7 @@ viewer](https://gltf-viewer.donmccurdy.com/), by dragging all of those files
 into the window together. In the *Animations* tab, select animations one at a
 time and ensure that they play as expected.
 
-<figure>
+<figure class="width-large">
   <img src="/assets/images/2017/11/cycle_quick.gif" alt="Cycling through animations in the online glTF viewer.">
   <figcaption>Cycling through animations in the online glTF viewer.</figcaption>
 </figure>
