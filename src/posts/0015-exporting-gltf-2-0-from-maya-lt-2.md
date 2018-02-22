@@ -5,6 +5,17 @@ date: 2017-06-27 17:02:32
 layout: post.html
 ---
 
+> **Updated Febrary 2018**: The tools available for glTF have changed since last June, and I've tried to update things accordingly. Unfortunately there is still no _direct_ path to glTF from Autodesk tools like Maya, Maya LT, or 3DS Max, so anything you do will require hopping through at least one intermediate step.
+>
+> There are now some viable alternatives to the process I describe in this article, any of which may be well worth trying. In no particular order:
+>
+> 1. Export to FBX and convert with Facebook's [FBX2glTF](https://github.com/facebookincubator/FBX2glTF), which has experimental support for converting Stingray PBS materials to glTF's PBR representation.
+> 2. [COLLADA2GLTF](https://github.com/KhronosGroup/COLLADA2GLTF) has been updated to support glTF 2.0.
+> 3. The [three.js editor](https://threejs.org/editor/) can import many files with drag-and-drop, and export to glTF.
+> 4. Recent versions of [Substance Painter](https://www.allegorithmic.com/products/substance-painter) export directly to glTF 2.0, and should have good integration with Maya workflows.
+
+***
+
 This post will walk through the process of exporting an animated [glTF 2.0](https://www.khronos.org/news/press/khronos-releases-gltf-2.0-specification) model from Maya LT. We’ll use the following tools:
 
 * [Maya LT](https://www.autodesk.com/products/maya-lt/overview)
@@ -12,9 +23,9 @@ This post will walk through the process of exporting an animated [glTF 2.0](http
 * [Blender](https://www.blender.org/)
 * [Blender glTF exporter](https://github.com/KhronosGroup/glTF-Blender-Exporter/)
 
-All of these are available for Windows or macOS. As of this writing, the most reliable way to create glTF 2.0 assets is through the official Blender exporter. Because Blender cannot import recent versions of FBX, my workflow uses COLLADA as an intermediate format.
+All of these are available for Windows or macOS. Because Blender cannot import recent versions of FBX, my workflow uses COLLADA as an intermediate format.
 
-The post _does not_ cover how to create PBR materials — a follow-up post will go into texturing with [Substance Painter](https://www.allegorithmic.com/products/substance-painter) and exporting PBR metal/rough assets.
+The post _does not_ cover how to create PBR materials — for that, refer to the [Blender exporter's documentation](https://github.com/KhronosGroup/glTF-Blender-Exporter/blob/master/docs/user.md). Default Blender materials should generally work, but support for Cycles nodes is quite minimal unless using the glTF-specific Cycles nodes included with the exporter. Support for the Principled BSDF node is also missing, but likely to be added soon.
 
 For an alternative workflow using Blender and COLLADA2GLTF, you may want to try with Diego Goberna’s excellent article, [glTF Workflow for A-Saturday-Night](https://blog.mozvr.com/a-saturday-night-gltf-workflow/), instead.
 
