@@ -13,6 +13,7 @@ layout: post.html
 > 2. [COLLADA2GLTF](https://github.com/KhronosGroup/COLLADA2GLTF) has been updated to support glTF 2.0.
 > 3. The [three.js editor](https://threejs.org/editor/) can import many files with drag-and-drop, and export to glTF.
 > 4. Recent versions of [Substance Painter](https://www.allegorithmic.com/products/substance-painter) export directly to glTF 2.0, and should have good integration with Maya workflows.
+> 5. Community members at _Wonder Media_ have started an open source glTF plugin for the full version of Maya, [Maya2glTF](https://github.com/Ziriax/Maya2glTF). It's in _pre-alpha_ now, and Autodesk doesn't allow plugins like this in Maya LT, but if you have a full Maya license consider testing this and sharing feedback on GitHub.
 
 ***
 
