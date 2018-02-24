@@ -11,9 +11,19 @@ layout: post.html
 >
 > 1. Export to FBX and convert with Facebook's [FBX2glTF](https://github.com/facebookincubator/FBX2glTF), which has experimental support for converting Stingray PBS materials to glTF's PBR representation.
 > 2. [COLLADA2GLTF](https://github.com/KhronosGroup/COLLADA2GLTF) has been updated to support glTF 2.0.
-> 3. The [three.js editor](https://threejs.org/editor/) can import many files with drag-and-drop, and export to glTF.
+> 3. The [three.js editor](https://threejs.org/editor/) can import many files with drag-and-drop, and export to glTF. This relies on `THREE.GLTFExporter`, which can also be used in your own web applications to enable glTF export.
 > 4. Recent versions of [Substance Painter](https://www.allegorithmic.com/products/substance-painter) export directly to glTF 2.0, and should have good integration with Maya workflows.
-> 5. Community members at _Wonder Media_ have started an open source glTF plugin for the full version of Maya, [Maya2glTF](https://github.com/Ziriax/Maya2glTF). It's in _pre-alpha_ now, and Autodesk doesn't allow plugins like this in Maya LT, but if you have a full Maya license consider testing this and sharing feedback on GitHub.
+> 5. For simple models (no animation, no PBR), exporting to OBJ and converting with [obj2gltf](https://github.com/AnalyticalGraphicsInc/obj2gltf) is likely to be a very reliable option.
+> 
+> Autodesk doesn't allow most plugins in Maya LT, but if you happen to have a license for the full version of Maya or 3DS Max, you have a few more choices:
+> 
+> 1. *(Untested)* Community members at _Wonder Media_ have started an open source glTF plugin for the full version of Maya, [Maya2glTF](https://github.com/Ziriax/Maya2glTF). It's in _pre-alpha_ now.
+> 2. *(Untested)* The BabylonJS team has created a plugin for 3DS Max, and is working on one for Maya. Find both plugins at [BabylonJS/Exporters](https://github.com/BabylonJS/Exporters).
+> 3. *(Untested)* [Verge3D](https://www.soft8soft.com/) offers glTF 2.0 export for 3DS Max.
+> 
+> For any of these tools, please file issues on GitHub — including source files where possible — if you run into trouble. Finally, consider upvoting [suggestions in the Maya or Maya LT idea forums](https://mayafeedback.autodesk.com/forums/160514-ideas-for-maya-forum/suggestions/31932220-gltf-support-is-needed-for-vr-ar-industry) if glTF 2.0 support would be useful to you.
+> 
+> The original post continues below.
 
 ***
 
