@@ -157,20 +157,23 @@ to send our NPC around the scene:
       <!-- NPC -->
       <a-entity id="npc"
                 gltf-model="npc.gltf"
-                nav-controller="speed: 1.5"></a-entity>
+                nav-agent="speed: 1.5"></a-entity>
     </a-scene>
 
 The `nav-mesh` component is a way of telling the navigation system which model
-to use for pathfinding. The `nav-controller` component adds behaviors to the NPC
+to use for pathfinding. The `nav-agent` component adds behaviors to the NPC
 entity, allowing it to search for paths and move toward a destination.
 
 Finally, we’ll add ourselves to the scene with a custom pointer that tells the
 NPC where to go. Add this snippet to the scene above:
 
-    <a-entity camera="userHeight: 1.6"
-              universal-controls>
-      <a-cursor nav-pointer
-                raycaster="objects: [nav-mesh]"></a-cursor>
+    <a-entity id="rig" movement-controls="constrainToNavMesh: true" position="0 0 5">
+      <a-entity camera
+                position="0 1.6 0"
+                look-controls="pointerLockEnabled: true">
+        <a-cursor nav-pointer
+                  raycaster="objects: [nav-mesh]"></a-cursor>
+      </a-entity>
     </a-entity>
 
 That `nav-pointer` component is not one of the pre-bundled components, so we’ll
@@ -182,8 +185,8 @@ have to define it ourselves:
 
         // On click, send the NPC to the target location.
         el.addEventListener('click', (e) => {
-          const ctrlEl = el.sceneEl.querySelector('[nav-controller]');
-          ctrlEl.setAttribute('nav-controller', {
+          const ctrlEl = el.sceneEl.querySelector('[nav-agent]');
+          ctrlEl.setAttribute('nav-agent', {
             active: true,
             destination: e.detail.intersection.point
           });
@@ -215,3 +218,5 @@ for roomscale VR locomotion, this same nav mesh can be reused:
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">New blog post about navigation meshes for WebVR, and a simple pathfinding module in <a href="https://twitter.com/aframevr?ref_src=twsrc%5Etfw">@aframevr</a> extras. <a href="https://t.co/HtneyKhWLO">https://t.co/HtneyKhWLO</a> <a href="https://t.co/Ljlu8VltFR">pic.twitter.com/Ljlu8VltFR</a></p>&mdash; Don McCurdy (@donrmccurdy) <a href="https://twitter.com/donrmccurdy/status/899487743306158080?ref_src=twsrc%5Etfw">August 21, 2017</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
+> **UPDATE 3/31/2018:** Corrected A-Frame examples to match pathfinding and
+> locomotion syntax in aframe-extras v4+.
