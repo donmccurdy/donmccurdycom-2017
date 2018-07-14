@@ -162,30 +162,22 @@ its armature.
   <figcaption>Delete the armatures for each animation, leaving only the base character.</figcaption>
 </figure>
 
-* Install the [Kupoman glTF exporter](https://github.com/Kupoman/blendergltf). If
-you already have the [Khronos Group glTF
-exporter](https://github.com/KhronosGroup/glTF-Blender-Exporter), you’ll need to
-disable it. The Khronos Group exporter is generally reliable, but [doesn’t yet
-support exporting multiple
-Actions](https://github.com/KhronosGroup/glTF-Blender-Exporter/issues/39). Both
+* Install the [Khronos Group glTF exporter](https://github.com/KhronosGroup/glTF-Blender-Exporter)
+or [Kupoman glTF exporter](https://github.com/Kupoman/blendergltf). Both
 exporters cannot be enabled at the same time.
 
-<figure>
-  <img src="/assets/images/2017/11/addons.png"
-       alt="Kupoman glTF Exporter should be enabled. Khronos Group glTF Exporter should be disabled, if installed.">
-  <figcaption>
-    Kupoman glTF Exporter should be enabled. Khronos Group glTF Exporter should be disabled, if installed.
-  </figcaption>
-</figure>
+> **NOTE:** When this post was initially published, only the *Kupoman* exporter
+> supported multiple animations. Now both exporters should work.
 
+* *If using the Khronos Group exporter* — Ensure the actions you want to export
+are either active, stashed, or "pushed down" into NLA tracks.
 * *File* → *Export* → *glTF*
-* In the *Animations* section, ensure that *All Eligible* objects and armatures
-are exported. This ensures we get all of the available animations, not just the
-T-Pose.
+* *If using the Kupoman exporter* — In the *Animations* section, ensure that *All Eligible* objects and armatures
+are exported. This ensures we get all of the available animations, not just the T-Pose.
 
 <figure>
   <img src="/assets/images/2017/11/all_eligible.png" alt="Select “*All Eligible” for animation Armatures and Objects.*">
-  <figcaption>Select “*All Eligible” for animation Armatures and Objects.*</figcaption>
+  <figcaption>Select “*All Eligible” for animation Armatures and Objects. Applies to Kupoman exporter only.*</figcaption>
 </figure>
 
 The export will create multiple files: a `.gltf`, a `.bin`, and perhaps some
