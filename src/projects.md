@@ -4,6 +4,14 @@ layout: page.html
 isProjects: true
 ---
 
+## Environmental Insights Explorer (Google)
+
+![EIE screenshot](/assets/images/2018/09/eie_screenshot.jpg)
+
+**Environmental Insights Explorer** ([insights.sustainability.google](https://insights.sustainability.google/)) estimates city-scale building and transportation carbon emissions data, as well as renewable energy potential, leading to more globally-consistent baselines from which to build policies, guide solutions, and measure progress. Analyses are derived from Google’s proprietary data and other leading sources. Created in collaboration with [Global Covenant of Mayors for Climate & Energy](https://www.globalcovenantofmayors.org/).
+
+**Software developer**, *2017 to present.*
+
 ## Project Sunroof (Google)
 
 ![Project Sunroof screenshot](/assets/images/2017/12/sunroof_screenshot.jpg)

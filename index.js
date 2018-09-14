@@ -12,7 +12,7 @@ metalsmith(__dirname)
     site: {
       title: 'Don McCurdy',
       url: 'https://www.donmccurdy.com/',
-      description: 'Developer on Project Sunroof, at Google. Working on climate change, data visualization, graphics, and WebVR.',
+      description: 'Developer on Earth Engine, at Google. Working on climate change, data visualization, graphics, and WebVR.',
       year: new Date().getFullYear()
     }
   })
