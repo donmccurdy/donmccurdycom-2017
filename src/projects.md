@@ -6,7 +6,7 @@ isProjects: true
 
 ## Environmental Insights Explorer (Google)
 
-![EIE screenshot](/assets/images/2018/09/eie_screenshot.jpg)
+![Screenshot of the Environmental Insights Explorer webpage, showing a map of the city of Melbourne, Australia, and various statistics related to building CO2 emissions.](/assets/images/2018/09/eie_screenshot.jpg)
 
 **Environmental Insights Explorer** ([insights.sustainability.google](https://insights.sustainability.google/)) estimates city-scale building and transportation carbon emissions data, as well as renewable energy potential, leading to more globally-consistent baselines from which to build policies, guide solutions, and measure progress. Analyses are derived from Google’s proprietary data and other leading sources. Created in collaboration with [Global Covenant of Mayors for Climate & Energy](https://www.globalcovenantofmayors.org/).
 
@@ -14,7 +14,7 @@ isProjects: true
 
 ## Project Sunroof (Google)
 
-![Project Sunroof screenshot](/assets/images/2017/12/sunroof_screenshot.jpg)
+![Screenshot of the Project Sunroof webpage, including a map of Colorado - colored to indicate solar potential of buildings - with various statistics related to solar energy.](/assets/images/2017/12/sunroof_screenshot.jpg)
 
 **Project Sunroof** ([google.com/sunroof](https://www.google.com/get/sunroof)) is a free, public tool for estimating the amount of renewable electricity that a home — or an entire city — could generate with solar panels. Project Sunroof uses machine learning to find feasible locations for solar panels on a roof. Then, the tool estimates electrical generation using historical weather, shadows from trees and obstacles, and locally applicable tax incentives.
 
@@ -26,7 +26,7 @@ The online [data explorer](https://www.google.com/get/sunroof/data-explorer/) pr
 
 ## glTF (Khronos Group)
 
-![glTF screenshot](/assets/images/2017/12/gltf_screenshot.jpg)
+![Screenshot showing a 3D model of a sci-fi helmet, embedded in a webpage.](/assets/images/2017/12/gltf_screenshot.jpg)
 
 **GL Transmission Format (glTF)** ([khronos.org/gltf](https://www.khronos.org/gltf/)) is a royalty-free specification for the efficient transmission and loading of 3D scenes and models by applications. glTF minimizes both the size of 3D assets, and the runtime processing needed to unpack and use those assets. glTF defines an extensible, common publishing format for 3D content tools and services that streamlines authoring workflows and enables interoperable use of content across the industry.
 
@@ -36,7 +36,7 @@ The online [data explorer](https://www.google.com/get/sunroof/data-explorer/) pr
 
 ## A-Frame VR
 
-![A-Frame screenshot](/assets/images/2017/12/aframe_screenshot.jpg)
+![Screenshot of the A-Frame webpage, including a prominent, 3D letter "A" and links to several VR showcase examples.](/assets/images/2017/12/aframe_screenshot.jpg)
 
 **A-Frame** ([aframe.io](https://aframe.io)) is a web framework for building virtual reality (VR) experiences. Originally from [Mozilla](https://mozilla.org/), A-Frame was developed to be an easy but powerful way to develop VR content. As an [independent open source project](https://github.com/aframevr/), A-Frame has grown to be one of the [largest and most welcoming VR communities](https://aframe.io/community/).
 
