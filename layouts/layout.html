@@ -22,6 +22,7 @@
   <meta property="og:title" content="{{ title || site.title }}" />
   <meta property="og:description" content="{{ snippet || site.description }}" />
   <meta property="og:url" content="{{ site.url + path }}" />
+  {% if image %}<meta property="og:image" content="{{ image }}" />{% endif %}
   {% if date %}<meta property="article:published_time" content="{{ date.toISOString() }}" />{% endif %}
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="{{ title || site.title }}" />
@@ -31,6 +32,7 @@
   <meta name="twitter:data1" content="Don McCurdy" />
   <meta name="twitter:site" content="@donrmccurdy" />
   <meta name="twitter:creator" content="@donrmccurdy" />
+  {% if imageAlt %}<meta name="twitter:image:alt" content="{{ imageAlt }}">{% endif %}
 </head>
 <body>
 
@@ -66,7 +68,7 @@
   </main>
 
   <footer>
-    <a href="https://donmccurdy.com/rss.xml" target="_blank">RSS feed</a>
+    <a href="https://donmccurdy.com/rss.xml" target="_blank">RSS</a>
     / <a href="http://creativecommons.org/publicdomain/zero/1.0/">Creative Commons</a>
     / {{ site.year }}
   </footer>
