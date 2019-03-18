@@ -78,6 +78,8 @@ const material = new THREE.StandardNodeMaterial();
 material.position = new GrassWindNode({ windSpeed: 5.0 });
 ```
 
+In time I'm hopeful that node-based materials will encourage more creative and reusable materials in the three.js community, and enable third-party libraries like [THREE.BAS](https://github.com/zadvorsky/three.bas) to integrate more easily with the three.js core library.
+
 <script type="module">
   import { Runtime, Inspector, createLibrary } from '/notebook-runtime.js';
   import notebook from 'https://api.observablehq.com/@donmccurdy/three-nodematerial-example.js';
