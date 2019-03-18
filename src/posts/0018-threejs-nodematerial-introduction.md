@@ -5,11 +5,11 @@ date: 2019-03-17 17:40:00
 layout: post.html
 draft: true
 syntax: true
-image: /assets/images/2019/03/grass-wind-thumb.png
+image: assets/images/2019/03/grass-wind-thumb.png
 imageAlt: A 3D rendering of lowpoly grass, moving gently in a breeze.
 ---
 
-Node-based materials have been an experimental part of the [three.js library](https://threejs.org/) for a few years now under [_three/examples/js/nodes/_](https://github.com/mrdoob/three.js/tree/dev/examples/js/nodes), thanks to the efforts of [Sunag](https://github.com/sunag). THREE.NodeMaterial is still a work in progress. There are [great examples](https://github.com/sunag) but little documentation, and it's not a drop-in replacement for the default materials yet. NodeMaterial can already be used to achieve some nice effects, without hot-patching the three.js shader library or writing custom materials from scratch.
+Node-based materials have been an experimental part of the [three.js library](https://threejs.org/) for a few years now under [_three/examples/js/nodes/_](https://github.com/mrdoob/three.js/tree/dev/examples/js/nodes), thanks to the efforts of [Sunag](https://github.com/sunag). There are [great examples](https://github.com/sunag), but _NodeMaterial_ is still a work in progress and not a drop-in replacement for the default materials yet. Nevertheless, _NodeMaterial_ can already be used to achieve some nice effects, without writing custom materials from scratch.
 
 A classic  material, like [_THREE.MeshStandardMaterial_](https://threejs.org/docs/#api/en/materials/MeshStandardMaterial), has a discrete number of inputs (`color`, `opacity`, `metalness`, `roughness`, ...), each accepting a simple scalar value. Node-based materials have mostly the same inputs, but *each input can accept a complex expression*. This gives the opportunity to adjust — or even radically alter — how the property behaves. Here's a simple example:
 

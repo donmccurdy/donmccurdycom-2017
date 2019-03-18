@@ -22,9 +22,13 @@
   <meta property="og:title" content="{{ title || site.title }}" />
   <meta property="og:description" content="{{ snippet || site.description }}" />
   <meta property="og:url" content="{{ site.url + path }}" />
-  {% if image %}<meta property="og:image" content="{{ image }}" />{% endif %}
+  {% if image %}<meta property="og:image" content="{{ site.url + image }}" />{% endif %}
   {% if date %}<meta property="article:published_time" content="{{ date.toISOString() }}" />{% endif %}
+  {% if image %}
+  <meta name="twitter:card" content="summary_large_image" />
+  {% else %}
   <meta name="twitter:card" content="summary" />
+  {% endif %}
   <meta name="twitter:title" content="{{ title || site.title }}" />
   <meta name="twitter:description" content="{{ snippet || site.description }}" />
   <meta name="twitter:url" content="{{ site.url + path }}" />
@@ -32,6 +36,7 @@
   <meta name="twitter:data1" content="Don McCurdy" />
   <meta name="twitter:site" content="@donrmccurdy" />
   <meta name="twitter:creator" content="@donrmccurdy" />
+  {% if image %}<meta name="twitter:image" content="{{ site.url + image }}">{% endif %}
   {% if imageAlt %}<meta name="twitter:image:alt" content="{{ imageAlt }}">{% endif %}
 </head>
 <body>
