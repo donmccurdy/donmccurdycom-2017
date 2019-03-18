@@ -3,6 +3,7 @@ const collections = require('metalsmith-collections');
 const layouts     = require('metalsmith-layouts');
 const less        = require('metalsmith-less');
 const markdown    = require('metalsmith-markdown');
+const metallic    = require('metalsmith-metallic');
 const permalinks  = require('metalsmith-permalinks');
 const rss         = require('metalsmith-feed');
 const snippet     = require('metalsmith-snippet');
@@ -31,6 +32,7 @@ metalsmith(__dirname)
       reverse: true
     }
   }))
+  .use(metallic())
   .use(markdown())
   .use(snippet({maxLength: 200}))
   .use(permalinks({

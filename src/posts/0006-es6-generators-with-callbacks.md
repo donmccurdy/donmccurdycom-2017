@@ -3,6 +3,7 @@ title: Using ES6 Generators with Callback-based Libraries
 slug: es6-generators-with-callbacks
 date: 2015-08-07 04:00:00
 layout: post.html
+syntax: true
 ---
 
 ES6 introduces generators (and `yield` expressions) to JavaScript. Kyle Simpson has written [a nice introduction to generators](http://davidwalsh.name/es6-generators), if you're looking for more about how they work.

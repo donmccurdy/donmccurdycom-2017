@@ -4,6 +4,7 @@ slug: grayscale-bookmarklet
 date: 2015-05-14 04:00:00
 layout: post.html
 snippet: A bit of code that can be used to convert any webpage (or part of a page) to grayscale.
+syntax: true
 ---
 
 A bit of code that can be used to convert any webpage (or part of a page) to grayscale. Because accessibility!

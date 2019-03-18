@@ -35,6 +35,7 @@
     ]
   },
   "devDependencies": {
+    "metalsmith-metallic": "^2.0.2",
     "serve": "^6.4.3",
     "watch-exec": "^1.2.2"
   }
