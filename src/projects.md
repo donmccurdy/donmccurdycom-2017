@@ -12,6 +12,8 @@ isProjects: true
 
 **Software developer**, *2017 to present.*
 
+***
+
 ## Project Sunroof (Google)
 
 ![Screenshot of the Project Sunroof webpage, including a map of Colorado - colored to indicate solar potential of buildings - with various statistics related to solar energy.](/assets/images/2017/12/sunroof_screenshot.jpg)

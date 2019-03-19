@@ -3,6 +3,7 @@ title: Creating a nav mesh for a WebVR scene
 slug: creating-a-nav-mesh-for-a-webvr-scene
 date: 2017-08-20 21:21:09
 layout: post.html
+syntax: true
 ---
 
 This tutorial shows how to create a navigation mesh for a scene
@@ -129,16 +130,18 @@ Here’s my result in the glTF Viewer:
 Now, we’re ready to try this out in A-Frame. Load up original mesh, the nav
 mesh, and a simple NPC:
 
-    <a-scene>
-      <!-- Scene -->
-      <a-entity gltf-model="scene.gltf"></a-entity>
+```html
+<a-scene>
+  <!-- Scene -->
+  <a-entity gltf-model="scene.gltf"></a-entity>
 
-      <!-- Nav Mesh -->
-      <a-entity gltf-model="navmesh.gltf"></a-entity>
+  <!-- Nav Mesh -->
+  <a-entity gltf-model="navmesh.gltf"></a-entity>
 
-      <!-- NPC -->
-      <a-entity id="npc" gltf-model="npc.gltf"></a-entity>
-    </a-scene>
+  <!-- NPC -->
+  <a-entity id="npc" gltf-model="npc.gltf"></a-entity>
+</a-scene>
+```
 
 Everything should be visible at this point, but nothing is happening. I’ve
 created a [basic set of pathfinding
@@ -146,19 +149,21 @@ components](https://github.com/donmccurdy/aframe-extras/tree/master/src/pathfind
 based on [PatrolJS](https://github.com/nickjanssen/PatrolJS/), which we’ll use
 to send our NPC around the scene:
 
-    <a-scene>
-      <!-- Scene -->
-      <a-entity gltf-model="scene.gltf"></a-entity>
+```html
+<a-scene>
+  <!-- Scene -->
+  <a-entity gltf-model="scene.gltf"></a-entity>
 
-      <!-- Nav Mesh -->
-       <a-entity gltf-model="navmesh.gltf"
-                 nav-mesh></a-entity>
+  <!-- Nav Mesh -->
+   <a-entity gltf-model="navmesh.gltf"
+             nav-mesh></a-entity>
 
-      <!-- NPC -->
-      <a-entity id="npc"
-                gltf-model="npc.gltf"
-                nav-agent="speed: 1.5"></a-entity>
-    </a-scene>
+  <!-- NPC -->
+  <a-entity id="npc"
+            gltf-model="npc.gltf"
+            nav-agent="speed: 1.5"></a-entity>
+</a-scene>
+```
 
 The `nav-mesh` component is a way of telling the navigation system which model
 to use for pathfinding. The `nav-agent` component adds behaviors to the NPC
@@ -167,53 +172,59 @@ entity, allowing it to search for paths and move toward a destination.
 Finally, we’ll add ourselves to the scene with a custom pointer that tells the
 NPC where to go. Add this snippet to the scene above:
 
-    <a-entity id="rig" movement-controls="constrainToNavMesh: true" position="0 0 5">
-      <a-entity camera
-                position="0 1.6 0"
-                look-controls="pointerLockEnabled: true">
-        <a-cursor nav-pointer
-                  raycaster="objects: [nav-mesh]"></a-cursor>
-      </a-entity>
-    </a-entity>
+```html
+<a-entity id="rig" movement-controls="constrainToNavMesh: true" position="0 0 5">
+  <a-entity camera
+            position="0 1.6 0"
+            look-controls="pointerLockEnabled: true">
+    <a-cursor nav-pointer
+              raycaster="objects: [nav-mesh]"></a-cursor>
+  </a-entity>
+</a-entity>
+```
 
 That `nav-pointer` component is not one of the pre-bundled components, so we’ll
 have to define it ourselves:
 
-    AFRAME.registerComponent('nav-pointer', {
-      init: function () {
-        const el = this.el;
+```js
+AFRAME.registerComponent('nav-pointer', {
+  init: function () {
+    const el = this.el;
 
-        // On click, send the NPC to the target location.
-        el.addEventListener('click', (e) => {
-          const ctrlEl = el.sceneEl.querySelector('[nav-agent]');
-          ctrlEl.setAttribute('nav-agent', {
-            active: true,
-            destination: e.detail.intersection.point
-          });
-        });
-
-        // When hovering on the nav mesh, show a green cursor.
-        el.addEventListener('mouseenter', () => {
-          el.setAttribute('material', {color: 'green'});
-        });
-        el.addEventListener('mouseleave', () => {
-          el.setAttribute('material', {color: 'crimson'})
-        });
-     
-        // Refresh the raycaster after models load.
-        el.sceneEl.addEventListener('object3dset', () => {
-          this.el.components.raycaster.refreshObjects();
-        });
-      }
+    // On click, send the NPC to the target location.
+    el.addEventListener('click', (e) => {
+      const ctrlEl = el.sceneEl.querySelector('[nav-agent]');
+      ctrlEl.setAttribute('nav-agent', {
+        active: true,
+        destination: e.detail.intersection.point
+      });
     });
+
+    // When hovering on the nav mesh, show a green cursor.
+    el.addEventListener('mouseenter', () => {
+      el.setAttribute('material', {color: 'green'});
+    });
+    el.addEventListener('mouseleave', () => {
+      el.setAttribute('material', {color: 'crimson'})
+    });
+ 
+    // Refresh the raycaster after models load.
+    el.sceneEl.addEventListener('object3dset', () => {
+      this.el.components.raycaster.refreshObjects();
+    });
+  }
+});
+```
 
 That’s it! The nav mesh doesn’t need to be shown anymore, so hide it by adding
 `visible=”false”`. Click anywhere to guide the NPC around. If you want to use
 `[teleport-controls](https://github.com/fernandojsg/aframe-teleport-controls)`
 for roomscale VR locomotion, this same nav mesh can be reused:
 
-    <a-entity teleport-controls="hitEntity: [nav-mesh];"
-              vive-controls="hand: left;"></a-entity>
+```html
+<a-entity teleport-controls="hitEntity: [nav-mesh];"
+          vive-controls="hand: left;"></a-entity>
+```
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">New blog post about navigation meshes for WebVR, and a simple pathfinding module in <a href="https://twitter.com/aframevr?ref_src=twsrc%5Etfw">@aframevr</a> extras. <a href="https://t.co/HtneyKhWLO">https://t.co/HtneyKhWLO</a> <a href="https://t.co/Ljlu8VltFR">pic.twitter.com/Ljlu8VltFR</a></p>&mdash; Don McCurdy (@donrmccurdy) <a href="https://twitter.com/donrmccurdy/status/899487743306158080?ref_src=twsrc%5Etfw">August 21, 2017</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

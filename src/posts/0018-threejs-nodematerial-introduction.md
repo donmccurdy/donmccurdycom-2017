@@ -61,11 +61,13 @@ This is more code than the plain GLSL above, but consider what we _didn't_ have 
 Node-based materials have gained popularity in tools like [Shader Forge](http://acegikmo.com/shaderforge/), [Unity](https://blogs.unity3d.com/2018/02/27/introduction-to-shader-graph-build-your-shaders-with-a-visual-editor/), [Unreal](https://docs.unrealengine.com/en-us/Engine/Rendering/Materials/Editor), [Houdini](https://www.sidefx.com/), and [Blender](https://docs.blender.org/manual/en/latest/render/blender_render/materials/nodes/introduction.html), for their expressive flexibility. While those tools provide a user interface for constructing the shader graph, no such UI exists for _THREE.NodeMaterial_ just yet. As an experiment I've explored parsing a node graph created in another tool, [Shade for iOS](https://shade.to/), and converting that to equivalent three.js nodes:
 
 <figure>
-<video style="width: 100%;" autoplay muted loop>
-  <source src="/assets/images/2019/03/grass-wind.webm" type="video/webm">
-  <source src="/assets/images/2019/03/grass-wind.mov" type="video/mp4">
-</video>
-<figcaption style="max-width: 550px; margin: 0 auto;">A node-based shader, from the [Shade for iOS](https://shade.to/) examples, using an instanced glTF grass mesh with a procedural wind animation. [Live demo](https://three-shadenodeloader.donmccurdy.com/).</figcaption>
+  <video style="width: 100%;" autoplay muted loop>
+    <source src="/assets/images/2019/03/grass-wind.webm" type="video/webm">
+    <source src="/assets/images/2019/03/grass-wind.mov" type="video/mp4">
+  </video>
+  <figcaption style="max-width: 550px; margin: 0 auto;">
+    A node-based shader, from the [Shade for iOS](https://shade.to/) examples, using an instanced glTF grass mesh with a procedural wind animation. [Live demo](https://three-shadenodeloader.donmccurdy.com/).
+  </figcaption>
 </figure>
 
 Node-based materials are declarative, optimizable, and [composable](https://en.wikipedia.org/wiki/Composability). They are relatively easy to reuse and share. For example, a developer could write a series of _new_ nodes (composed of the core nodes) for complex behaviors. Published on NPM, those nodes would be accessible to all three.js users:

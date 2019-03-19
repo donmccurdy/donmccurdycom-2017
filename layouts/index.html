@@ -5,8 +5,8 @@
 <ol class="index-list">
   {% for post in posts %}
   <li>
-    <a href="{{post.path}}">{{post.title}}</a>,
-    <i>{{ post.date | date('F d, Y') }}</i>.
+    <a href="{{post.path}}">{{post.title}}</a> •
+    <i>{{ post.date | date('F d, Y') }}</i><br/>
     {{ post.snippet | safe }}
   </li>
   {% endfor %}
