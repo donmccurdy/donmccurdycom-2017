@@ -9,7 +9,7 @@
   <meta name="description" content="{{ snippet || site.description }}">
   <meta name="HandheldFriendly" content="True" />
   <meta name="MobileOptimized" content="320" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <link rel="stylesheet" href="/assets/css/screen.css">
   {% if syntax %}<link rel="stylesheet" href="/assets/css/syntax.css">{% endif %}
@@ -50,7 +50,7 @@
       <p class="blog-description">{{ site.description }}</p>
       {% endif %}
 
-      <nav class="menu" role="nav">
+      <nav class="menu">
         <ul>
           <li {% if isIndex %}class="active"{% endif %}>
             <a href="/">Blog</a>

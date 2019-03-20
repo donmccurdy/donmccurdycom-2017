@@ -1,5 +1,3 @@
-// This file is horribly organized. I'm going to revamp it in 1.5.
-
 // Imports
 
 @import url('//fonts.googleapis.com/css?subset=latin,cyrillic-ext,latin-ext,cyrillic&family=Open+Sans+Condensed:300|Open+Sans:400,600,400italic,600italic|Merriweather:400,300,300italic,400italic,700,700italic|Roboto+Slab:400,300');
@@ -11,7 +9,7 @@
 @bodyBackgroundColor: #FFFFFF;
 @baseFontFamily: "Merriweather", "Open Sans", "Helvetica Neue", Helvetica, Arial, "Nimbus L", sans-serif;
 @baseFontColor: #4F6C6D;
-@baseFontSize: 15px;
+@baseFontSize: 17px;
 @headerFontFamily: "Roboto Slab", @baseFontFamily;
 @headerFontColor: #151515;
 @headerLinkColor: @headerFontColor;
@@ -21,7 +19,6 @@
 @linkColor: #D96459;
 @borderColor: #ECF0F1;
 @subtleColor: #F3F3F3;
-@postmetaColor: #95A5A6;
 @gistBackgroundColor: #FDFDFD;
 
 @maxPageWidth: 720px;
@@ -35,19 +32,23 @@ body {
     color: @baseFontColor;
     font-size: @baseFontSize;
     font-weight: 100;
-    line-height: 1.6em;
+    line-height: 1.5em;
     margin: 0;
     padding: 0;
     -webkit-font-smoothing: subpixel-antialiased;
 }
 
-    body * {
-        max-height: 1000000em
-    }
+body * {
+    max-height: 1000000em;
+}
 
 h1, h2, h3, h4, p, li, dt, dd {
     font-family: @baseFontFamily;
     line-height: 1.2em;
+}
+
+p, li, dt, dd {
+    line-height: 1.5em;
 }
 
 a, a:visited {
@@ -57,11 +58,6 @@ a, a:visited {
 
 a:focus, a:hover {
     .underline;
-}
-
-p, li, dt, dd {
-    font-size: 17px;
-    line-height: 1.5em;
 }
 
 dt {
@@ -102,19 +98,19 @@ h1 {
 #site-head {
     margin: 0;
     overflow: hidden;
-}
 
-    #site-head img {
+    img {
         max-width: 100%
     }
 
-    #site-head .header-col {
+    .header-col {
         border-top: 1px solid @borderColor;
         border-bottom: 1px solid @borderColor;
         max-width: @maxPageWidth;
         margin: 0 auto 2em auto;
         padding: 1em 0;
     }
+}
 
 article, article.preview, .article-nav {
     margin: 1em auto;
@@ -127,11 +123,7 @@ article.preview + hr {
     margin: 4em auto;
 }
 
-@media only screen and (min-width: 320px) and (max-width: 500px) {
-    p, li, dt, dd {
-        font-size: 1.0em;
-    }
-
+@media (max-width: 500px) {
     article.preview + hr {
         margin: 3em auto;
     }
@@ -165,35 +157,15 @@ blockquote {
     border-left: .5em solid @subtleColor;
     margin-left: 1em;
     padding-left: 1em;
-}
 
-    blockquote p {
+    p {
         font-style: italic;
         font-size: 1em;
     }
 
-    blockquote cite {
+    cite {
         font-style: italic;
     }
-
-.post-meta {
-    color: @postmetaColor;
-    font-family: @secondaryFontFamily;
-    font-size: 20px;
-    font-weight: 300;
-    margin-top: 0.5em;
-    margin-bottom: 2em;
-    text-align: left;
-    text-transform: uppercase;
-
-    .preview & {
-        margin-bottom: 1.2em;
-    }
-}
-
-.tags {
-    font-size: 16px;
-    margin-bottom: 0.6em;
 }
 
 .post-title {
@@ -211,10 +183,11 @@ blockquote {
 .blog-title a {
     color: @headerLinkColor;
     text-align: left;
-}
 
-.blog-title a:focus, .blog-title a:hover {
-    background-image: none;
+    &:focus,
+    &:hover {
+        background-image: none;
+    }
 }
 
 mark {
@@ -227,7 +200,7 @@ time {
 
 h2 {
     font-family: @secondaryFontFamily;
-    font-size: 2em;
+    font-size: 1.8em;
     font-weight: 300;
     margin-top: 2em;
     text-transform: uppercase;
@@ -279,7 +252,7 @@ figcaption {
     margin-top: 1em;
 }
 
-@media only screen and (max-width: 1324px) {
+@media (max-width: 1324px) {
     figure.width-large {
         width: 100%;
         position: static;
@@ -293,26 +266,29 @@ figcaption {
 .index-list {
     list-style: none;
     padding-left: 0;
-}
 
-.index-list li {
-    padding-left: 0;
-    margin-bottom: 2em;
+    li {
+        padding-left: 0;
+        margin-bottom: 2em;
 
-    &:last-child { margin-bottom: 0; }
+        &:last-child { margin-bottom: 0; }
 
-    .date {
-        color: #AAA;
+        .date {
+            color: #AAA;
+        }
+    }
+
+    time::before {
+        content: " • "
+    }
+
+    time::after {
+        content: "\A";
+        white-space: pre;
     }
 }
 
-section.post-excerpt .read-more {
-    font-size: 1.3rem;
-    font-family: @secondaryFontFamily;
-    text-transform: uppercase;
-}
-
-@media only screen and (min-width: 320px) and (max-width: 500px) {
+@media (max-width: 500px) {
     .blog-title {
         font-size: 36px;
     }
@@ -321,12 +297,16 @@ section.post-excerpt .read-more {
         padding: 0 1em;
     }
 
-    .post-title {
-        font-size: 24px;
+    .index-list time {
+        display: block;
     }
 
-    .post-meta {
-        font-size: @baseFontSize;
+    .index-list time::before {
+        content: ""
+    }
+
+    .post-title {
+        font-size: 24px;
     }
 }
 
@@ -334,13 +314,14 @@ section.post-excerpt .read-more {
 
 footer {
     background: @subtleColor;
+    font-family: @secondaryFontFamily;
+    font-size: @baseFontSize;
     margin: 4em 0 0;
     padding: 2em 0;
     text-align: center;
     text-transform: uppercase;
-}
 
-    footer section {
+    section {
         font-family: @secondaryFontFamily;
         font-size: 18px;
         margin: 0 auto;
@@ -348,11 +329,13 @@ footer {
         width: 90%;
     }
 
-    footer a:focus, footer a:hover {
+    a:focus,
+    a:hover {
         .underline(@subtleColor);
     }
+}
 
-@media only screen and (min-width: 320px) and (max-width: 500px) {
+@media (max-width: 500px) {
     footer section span.copyright {
         display: block
     }
@@ -391,87 +374,11 @@ nav {
             .underline;
         }
     }
-    &.pagination {
-        li {
-            &:first-child {
-                margin-left: 0;
-                margin-right: 0;
-                text-align: right;
-            }
-            &:last-child {
-                margin-left: 0;
-                margin-right: 0;
-                text-align: left;
-            }
-        }
-    }
 }
 
-.pagination {
-    position: relative;
-    width: 90%;
-    max-width: @maxPageWidth;
-    margin: 4em auto 0 auto;
-    font-family: @secondaryFontFamily;
-    text-transform: uppercase;
-    font-size: 20px;
-    color: @baseFontColor;
-    text-align: center;
-    padding: 0.5em 0;
-}
-
-    .pagination a {
-        color: @linkColor
-    }
-
-.older-posts, .newer-posts {
-    position: absolute;
-    display: inline-block;
-    padding: 0;
-    text-decoration: none;
-    transition: color ease 0.3s;
-    -webkit-transition: color ease 0.3s;
-}
-
-.newer-posts {
-    right: 0
-}
-
-.page-number {
-    display: inline-block;
-    padding: 0;
-    margin: 0;
-}
-
-.older-posts {
-    left: 0
-}
-
-.older-posts:hover, .newer-posts:hover {
-    .underline;
-}
-
-
-@media only screen and (min-width: 320px) and (max-width: 500px) {
-
+@media (max-width: 500px) {
     nav li {
         width: auto
-    }
-
-    .older-posts, .newer-posts {
-        position: static
-    }
-
-    .newer-posts {
-        margin-bottom: 10px
-    }
-
-    .older-posts {
-        margin-top: 10px
-    }
-
-    .page-number {
-        display: block
     }
 }
 
@@ -559,7 +466,7 @@ hr {
 
 /* Media */
 
-/** todo just pust the video */
+/** TODO(donmccurdy): Just host the video. */
 twitterwidget,
 .twitter-tweet {
     margin: 0 auto;
@@ -569,5 +476,5 @@ twitterwidget,
 
 .async-content {
     min-height: 100px;
-    background: #F3F3F3;
+    background: @subtleColor;
 }
