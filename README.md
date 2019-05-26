@@ -1,3 +1,3 @@
 # donmccurdy.com
 
-My personal website and blog, 2017 — present.
+My personal website and blog, 2017 – present.
