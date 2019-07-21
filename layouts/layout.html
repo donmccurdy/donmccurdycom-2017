@@ -58,6 +58,9 @@
           <li {% if isProjects %}class="active"{% endif %}>
             <a href="/projects/">Projects</a>
           </li>
+          <li {% if isPhotos %}class="active"{% endif %}>
+            <a href="/photos/">Photos</a>
+          </li>
           <li><a href="https://twitter.com/donrmccurdy" target="_blank" rel="noreferrer">Twitter</a></li>
           <li><a href="https://github.com/donmccurdy" target="_blank" rel="noreferrer">GitHub</a></li>
         </ul>
@@ -74,7 +77,11 @@
 
   <footer>
     <a href="https://donmccurdy.com/rss.xml" target="_blank">RSS</a>
-    / <a href="http://creativecommons.org/publicdomain/zero/1.0/">Creative Commons</a>
+    {% if isPhotos %}
+    / <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
+    {% else %}
+    / <a href="http://creativecommons.org/publicdomain/zero/1.0/">CC0 Public Domain</a>
+    {% endif %}
     / {{ site.year }}
   </footer>
 
