@@ -10,6 +10,7 @@ const snippet     = require('metalsmith-snippet');
 
 const fs          = require('fs');
 
+const MEDIA_ROOT  = 'https://storage.googleapis.com/donmccurdy-photos';
 const media       = require('./photos/dist/media.json');
 
 // Generate a markdown page for each photo.
@@ -24,7 +25,7 @@ metalsmith(__dirname)
       year: new Date().getFullYear()
     },
     media: {
-      root: 'https://storage.googleapis.com/donmccurdy-photos',
+      root: MEDIA_ROOT,
       ...media
     }
   })
@@ -89,6 +90,8 @@ slug: ${slug}
 date: ${photo.date}
 layout: photo.html
 id: ${photo.id}
+imageAbs: ${MEDIA_ROOT}/${photo.id}_1280.jpg
+imageAlt: ${photo.title}
 isPhotos: true
 metadata:
     acquisitionMake: ${photo.acquisitionMake}
