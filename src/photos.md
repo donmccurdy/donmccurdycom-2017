@@ -34,6 +34,7 @@ Instagram: [@donmccurdy](https://www.instagram.com/donmccurdy/)
         // Fallback.
         const imgJPG = document.createElement('img');
         imgJPG.src = `${srcPrefix}_640.jpg`;
+        imgJPG.alt = photo.title;
 
         // Link to full-resolution version.
         const anchorEl = document.createElement('a');
