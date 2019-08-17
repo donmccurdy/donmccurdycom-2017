@@ -1,0 +1,25 @@
+{% extends "page.html" %}
+
+{% block body %}
+<p>
+  Instagram:
+  <a href="https://www.instagram.com/donmccurdy/" target="_blank">@donmccurdy</a>
+</p>
+
+<div id="photos">
+  {% for photo in photos %}
+    <figure title="{{ photo.title }} — {{ photo.date | date('F d, Y') }}">
+      <a href="../{{ photo.path }}">
+        <picture>
+          <source srcset="{{ media.root }}/{{ photo.id }}_640.webp"
+                  type="image/webp">
+          <source srcset="{{ media.root }}/{{ photo.id }}_640.jpg"
+                  type="image/jpeg">
+          <img src="{{ media.root }}/{{ photo.id }}_640.jpg"
+               alt="{{ photo.title }}">
+         </picture>
+      </a>
+    </figure>
+  {% endfor %}
+</div>
+{% endblock %}

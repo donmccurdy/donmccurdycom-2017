@@ -1,0 +1,3 @@
+[submodule "photos"]
+	path = photos
+	url = git@github.com:donmccurdy/donmccurdy-photos.git

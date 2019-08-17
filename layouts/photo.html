@@ -1,0 +1,25 @@
+{% extends "post.html" %}
+
+{% block body %}
+<figure class="width-large">
+  <picture>
+    <source srcset="{{ media.root }}/{{ id }}_2880.webp"
+            type="image/webp">
+    <source srcset="{{ media.root }}/{{ id }}_2880.jpg"
+            type="image/jpeg">
+    <img src="{{ media.root }}/{{ id }}_2880.jpg"
+         alt="{{ title }}"
+         style="max-height: 80vh;">
+  </picture>
+</figure>
+
+<h2>{{ title }}</h2>
+
+<table>
+  <tr><td>Creator</td><td>Don McCurdy</td></tr>
+  <tr><td>Date</td><td>{{ date | date('F d, Y') }}</td></tr>
+  <tr><td>Camera</td><td>{{ metadata.acquisitionModel }}</td></tr>
+  <!-- <tr><td>Aperture</td><td>{{ metadata.aperture }}</td></tr> -->
+  <!-- <tr><td>Exposure</td><td>{{ metadata.exposureTimeSeconds }}s</td></tr> -->
+</table>
+{% endblock %}

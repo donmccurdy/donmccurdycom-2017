@@ -8,6 +8,13 @@ const permalinks  = require('metalsmith-permalinks');
 const rss         = require('metalsmith-feed');
 const snippet     = require('metalsmith-snippet');
 
+const fs          = require('fs');
+
+const media       = require('./photos/dist/media.json');
+
+// Generate a markdown page for each photo.
+media.photos.forEach(createPhotoPage);
+
 metalsmith(__dirname)
   .metadata({
     site: {
@@ -15,6 +22,10 @@ metalsmith(__dirname)
       url: 'https://www.donmccurdy.com/',
       description: 'Developer at Google. Working on climate action, data visualization, and graphics.',
       year: new Date().getFullYear()
+    },
+    media: {
+      root: 'https://storage.googleapis.com/donmccurdy-photos',
+      ...media
     }
   })
   .source('./src')
@@ -23,6 +34,11 @@ metalsmith(__dirname)
   .use(collections({
     posts: {
       pattern: 'posts/*.md',
+      sortBy: 'date',
+      reverse: true
+    },
+    photos: {
+      pattern: 'photos/*.md',
       sortBy: 'date',
       reverse: true
     },
@@ -44,6 +60,10 @@ metalsmith(__dirname)
         pattern: ':date/:slug/'
       },
       {
+        match: {collection: 'photos'},
+        pattern: 'photos/:date/:slug/'
+      },
+      {
         match: {collection: 'drafts'},
         pattern: '_drafts/:slug/'
       }
@@ -58,3 +78,25 @@ metalsmith(__dirname)
   .build((err) => {
     if (err) throw err;
   });
+
+/** Generate a markdown page for each photo. */
+function createPhotoPage (photo) {
+  const slug = photo.id.replace(/_/g, '-');
+
+  fs.writeFileSync(`src/photos/${slug}.md`, `---
+title: ${photo.title}
+slug: ${slug}
+date: ${photo.date}
+layout: photo.html
+id: ${photo.id}
+isPhotos: true
+metadata:
+    acquisitionMake: ${photo.acquisitionMake}
+    acquisitionModel: ${photo.acquisitionModel}
+    aperture: ${photo.aperture}
+    exposureTimeSeconds: ${photo.exposureTimeSeconds}
+---
+
+${photo.id}.jpg
+`);
+}
