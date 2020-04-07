@@ -1,4 +1,4 @@
-// https://observablehq.com/@donmccurdy/unpaid-work@771
+// https://observablehq.com/@donmccurdy/unpaid-work@773
 export default function define(runtime, observer) {
   const main = runtime.module();
   const fileAttachments = new Map([["VIZ5_2020_April - Unpaid Work.csv",new URL("./files/a368475f89c75557fdbc68ac8be390c362fd32255a91c30e632096b97c5f6bda4fc51fcecd8be211b306d3fefb961e85396049ae1d3f3940e12d065c5892431a",import.meta.url)]]);
@@ -6,7 +6,7 @@ export default function define(runtime, observer) {
   main.variable(observer()).define(["md"], function(md){return(
 md`# Unpaid Work
 
-[Week 14, 2020](https://data.world/makeovermonday/2020w14) of [#MakeoverMonday](https://data.world/makeovermonday). I intended for this to be a bit of practice with different styles of visualization; it ended up being mostly a deep-dive into [dataframe.js](https://gmousse.gitbooks.io/dataframe-js/#dataframe-js), which I hadn't used before. Most time was spent data cleaning, discovering and resolving a few issues mentioned below. Got a bit more comfortable with dataframe.js by the end of the visualization, but probably should have just formatted the data in another tool before bringing it into JavaScript in retrospect.
+[Week 14, 2020](https://data.world/makeovermonday/2020w14) of [#MakeoverMonday](https://data.world/makeovermonday). I intended for this to be a bit of practice with different styles of visualization; it ended up being mostly a deep-dive into [dataframe.js](https://gmousse.gitbooks.io/dataframe-js/#dataframe-js), which I hadn't used before. Most time was spent data cleaning, discovering and resolving a few issues mentioned below. Got a bit more comfortable with dataframe.js by the end of the visualization, but probably should have just formatted the data in another tool before bringing it into JavaScript, in retrospect.
 
 - Original visualization: [Unpaid work: Allocation of time and time-use](https://unstats.un.org/unsd/gender/timeuse/index.html)
 - Data source: [UN Stats](https://unstats.un.org/unsd/gender/timeuse/index.html)
@@ -21,19 +21,19 @@ On an average day, in an average country worldwide, women spend ${
              (dfPercent.stat.mean('WomenPaidTime') + dfPercent.stat.mean('WomenUnpaidTime')) / 
              (dfPercent.stat.mean('MenPaidTime') + dfPercent.stat.mean('MenUnpaidTime'))) - 100
 
-}% more time working then men. Despite that, women's work is disproportionately (${
+}% more time working then men. Despite that, women's work is disproportionately unpaid labor(${
 
   Math.round(100 *
              dfPercent.stat.mean('WomenUnpaidTime') /
              (dfPercent.stat.mean('WomenPaidTime') + dfPercent.stat.mean('WomenUnpaidTime')))
 
-}% of total hours) unpaid labor, such as domestic and care efforts. Men's work, by contrast, is only rarely (${
+}% of total hours), such as domestic and care efforts. Men's work, by contrast, is only rarely unpaid (${
 
   Math.round(100 *
              dfPercent.stat.mean('MenUnpaidTime') /
              (dfPercent.stat.mean('MenPaidTime') + dfPercent.stat.mean('MenUnpaidTime')))
 
-}% of total hours) unpaid.
+}% of total hours).
 
 *For the purposes of this [UNSD study](https://unstats.un.org/unsd/gender/timeuse/index.html), subsistence labor is counted as paid labor. These statistics are related to SDG indicator 5.4.1 – "Time spent on unpaid domestic and care work, by sex, age and location."*
 `
