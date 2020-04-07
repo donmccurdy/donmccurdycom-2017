@@ -31,3 +31,5 @@ new Runtime().module(notebook, name => {
 });
 
 </script>
+
+Source code in Observable: [observablehq.com/@donmccurdy/unpaid-work](https://observablehq.com/@donmccurdy/unpaid-work)
