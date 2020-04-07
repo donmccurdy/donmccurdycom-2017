@@ -3,7 +3,6 @@ title: Hard drive backups
 slug: hard-drive-backups
 date: 2019-05-18 11:32:00
 layout: post.html
-draft: true
 ---
 
 I recently changed how I'm storing personal files and backing up my computer. As background, I use an older 2012 Apple laptop with a 500GB SSD, and that hard drive has been ~90% full for a while. I've been backing it up to an external HDD in my apartment, which is insurance against a hard drive failure but not against a fire, in which case both physical devices are gone. While Apple Time Machine can provide automatic backups, I do them manually – the HDD is loud, my apartment is small, and the noise is enough to keep me awake.

@@ -1,0 +1,14 @@
+{
+  "name": "@donmccurdy/unpaid-work",
+  "main": "45e9f1e62abdc7d9@771.js",
+  "version": "771.0.0",
+  "homepage": "https://observablehq.com/@donmccurdy/unpaid-work",
+  "author": {
+    "name": "Don McCurdy",
+    "url": "https://observablehq.com/@donmccurdy"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4"
+  }
+}
