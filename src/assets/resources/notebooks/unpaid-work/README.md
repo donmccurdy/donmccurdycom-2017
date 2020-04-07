@@ -1,6 +1,6 @@
 # Unpaid Work
 
-https://observablehq.com/@donmccurdy/unpaid-work@773
+https://observablehq.com/@donmccurdy/unpaid-work@797
 
 View this notebook in your browser by running a web server in this folder. For
 example:

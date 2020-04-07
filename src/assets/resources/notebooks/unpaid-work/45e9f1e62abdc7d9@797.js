@@ -1,4 +1,4 @@
-// https://observablehq.com/@donmccurdy/unpaid-work@773
+// https://observablehq.com/@donmccurdy/unpaid-work@797
 export default function define(runtime, observer) {
   const main = runtime.module();
   const fileAttachments = new Map([["VIZ5_2020_April - Unpaid Work.csv",new URL("./files/a368475f89c75557fdbc68ac8be390c362fd32255a91c30e632096b97c5f6bda4fc51fcecd8be211b306d3fefb961e85396049ae1d3f3940e12d065c5892431a",import.meta.url)]]);
@@ -262,14 +262,18 @@ dfCleaned
 md`## Helpers`
 )});
   main.variable(observer("createBarChart")).define("createBarChart", ["Chart","commas"], function(Chart,commas){return(
-function createBarChart(data, units = '') {
+function *createBarChart(data, units = '') {
   const canvasEl = document.createElement('canvas');
-  canvasEl.height = 500;
+  canvasEl.style.height = '1500px';
+  canvasEl.style.width = '100%';
+  yield canvasEl;
+  // canvasEl.style.height = '1000px';
   const ctx = canvasEl.getContext('2d');
   const chart = new Chart(ctx, {
       type: 'horizontalBar',
       data,
       options: {
+        maintainAspectRatio: false,
         scales: {
           xAxes: [{
             stacked: true,
@@ -282,6 +286,8 @@ function createBarChart(data, units = '') {
           yAxes: [{
             beginAtZero: true,
             stacked: true,
+            autoSkip: false,
+            // barThickness: 20,
           }]
         },
         tooltips: {
