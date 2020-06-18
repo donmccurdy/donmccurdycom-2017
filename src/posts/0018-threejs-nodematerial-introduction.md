@@ -3,7 +3,6 @@ title: Three.js NodeMaterial introduction
 slug: three-nodematerial-introduction
 date: 2019-03-17 17:40:00
 layout: post.html
-draft: true
 syntax: true
 image: assets/images/2019/03/grass-wind-thumb.png
 imageAlt: A 3D rendering of lowpoly grass, moving gently in a breeze.
