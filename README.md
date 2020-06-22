@@ -23,3 +23,10 @@ npm run dev
 # Deploy.
 npm run deploy
 ```
+
+## Adding photos
+
+1. Add "Title" as metadata in Lightroom.
+2. Export at ~4K resolution, move to `photos/src`
+3. In `photos`/: `npm run build && npm run deploy`
+4. In `./`: `npm run dev`
