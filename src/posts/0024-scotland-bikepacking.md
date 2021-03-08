@@ -7,7 +7,9 @@ image: assets/images/2021/0024-loadout.png
 imageAlt: An orange bike with two panniers and other supplies on the back rack, leaning against a fence.
 ---
 
-I visited Scotland during the summer of 2019, taking a solo bikepacking trip along parts of [NCN78](https://www.sustrans.org.uk/find-a-route-on-the-national-cycle-network/route-78-the-caledonia-way/) (“The Caledonia Way”). The trip began in Glasgow, where I rented a [Whyte Friston Gravel Bike](https://whyte.bike/collections/gravel-adventure-gx-series/products/friston) from [Billy Bilsland Cycles](https://www.billybilslandcycles.co.uk/pages/hire/), before taking a train to Inverness. Travel by train was quiet, scenic, and surprisingly easy.
+> NEW POST, OLD TRIP: The past year hasn't been one for travel, thanks to COVID-19. But in reminiscing about going places, I've finally found the motivation to write about a trip I took two years ago.
+
+I visited Scotland during the summer of 2019, taking a solo bikepacking trip along parts of [NCN78](https://www.sustrans.org.uk/find-a-route-on-the-national-cycle-network/route-78-the-caledonia-way/) (“The Caledonia Way”). The trip began in Glasgow, where I rented a Whyte Friston gravel bike from [Billy Bilsland Cycles](https://www.billybilslandcycles.co.uk/pages/hire/) before taking a train to Inverness. Travel by train was quiet, scenic, and relatively easy.
 
 <figure>
   <a href="https://www.strava.com/routes/2803871087139234548" target="_blank">
