@@ -3,7 +3,7 @@ title: Scotland Bikepacking
 slug: scotland-bikepacking
 date: 2021-03-07 22:10:00
 layout: post.html
-image: assets/images/2021/0024-loadout.png
+image: /assets/images/2021/0024-gravel-path.jpg
 imageAlt: An orange bike with two panniers and other supplies on the back rack, leaning against a fence.
 ---
 
