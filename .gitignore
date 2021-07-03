@@ -1,4 +1,5 @@
-build
+public
 node_modules
 src/photos/*
 !src/photos/.gitkeep
+.vercel

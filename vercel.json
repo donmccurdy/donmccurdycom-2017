@@ -1,3 +1,14 @@
 {
-  "version": 2
+  "version": 2,
+  "headers": [
+    {
+      "source": "/public/assets/(.*)",
+      "headers": [
+        {
+          "key" : "Cache-Control",
+          "value" : "public, max-age=86400"
+        }
+      ]
+    }
+  ]
 }

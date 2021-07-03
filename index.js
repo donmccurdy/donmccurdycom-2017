@@ -30,7 +30,7 @@ metalsmith(__dirname)
     }
   })
   .source('./src')
-  .destination('./build')
+  .destination('./public')
   .clean(true)
   .use(collections({
     posts: {

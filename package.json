@@ -1,21 +1,15 @@
 {
-  "name": "blog-metalsmith",
-  "version": "0.0.0",
-  "description": "My blog, 2017 edition.",
-  "main": "index.js",
   "private": true,
-  "repository": {
-    "url": "git://github.com/donmccurdy/blog-metalsmith.git"
-  },
-  "scripts": {
-    "dev": "watch-exec -w src -e src/photos -c \"npm run build\" & watch-exec -w layouts -c \"npm run build\" & serve build",
-    "build": "node index.js && cp vercel.json build/",
-    "deploy": "npm run build && now build --prod",
-    "postversion": "git push && git push --tags"
-  },
-  "keywords": [],
   "author": "Don McCurdy <dm@donmccurdy.com>",
   "license": "MIT",
+  "version": "0.0.0",
+  "repository": {
+    "url": "git://github.com/donmccurdy/donmccurdy.git"
+  },
+  "scripts": {
+    "build": "node index.js",
+    "postversion": "git push && git push --tags"
+  },
   "dependencies": {
     "metalsmith": "^2.3.0",
     "metalsmith-collections": "^0.9.0",
@@ -23,13 +17,9 @@
     "metalsmith-layouts": "^1.8.1",
     "metalsmith-less": "^2.0.0",
     "metalsmith-markdown": "^0.2.1",
+    "metalsmith-metallic": "^2.0.3",
     "metalsmith-permalinks": "^0.5.0",
     "metalsmith-snippet": "^2.0.0",
     "swig": "^1.4.2"
-  },
-  "devDependencies": {
-    "metalsmith-metallic": "^2.0.2",
-    "serve": "^10.1.2",
-    "watch-exec": "^1.2.2"
   }
 }

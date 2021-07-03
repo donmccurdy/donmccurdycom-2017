@@ -9,6 +9,7 @@ For the photo gallery, I export images and metadata from Adobe Lightroom. A scri
 Setup:
 
 ```shell
+npm install --global vercel
 npm install
 
 # Set up the photos submodule.
@@ -18,10 +19,7 @@ cd photos
 npm install && npm run build
 
 # Run a local server with automatic rebuilds.
-npm run dev
-
-# Deploy.
-npm run deploy
+vercel dev
 ```
 
 ## Adding photos
