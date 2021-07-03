@@ -21,7 +21,7 @@ metalsmith(__dirname)
     site: {
       title: 'Don McCurdy',
       url: 'https://www.donmccurdy.com/',
-      description: 'Developer at Google. Working on climate action, data visualization, and graphics.',
+      description: 'Developer working on climate data, graphics, data visualization, and web technologies.',
       year: new Date().getFullYear()
     },
     media: {

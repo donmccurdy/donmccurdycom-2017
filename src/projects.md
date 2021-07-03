@@ -10,7 +10,7 @@ isProjects: true
 
 **Environmental Insights Explorer** ([insights.sustainability.google](https://insights.sustainability.google/)) estimates city-scale building and transportation carbon emissions data, as well as renewable energy potential, leading to more globally-consistent baselines from which to build policies, guide solutions, and measure progress. Analyses are derived from Google’s proprietary data and other leading sources. Created in collaboration with [Global Covenant of Mayors for Climate & Energy](https://www.globalcovenantofmayors.org/).
 
-**Software developer**, *2017 to present.*
+**Software developer**, *2017–2021*.
 
 ***
 
@@ -26,7 +26,7 @@ isProjects: true
 
 The online [data explorer](https://www.google.com/get/sunroof/data-explorer/) provides solar overviews for many cities in the U.S., and the [homeowner tool](https://www.google.com/get/sunroof) allows individual residents to look up expected savings or costs for their address.
 
-**Software developer**, *2015 to present.*
+**Software developer**, *2015 to 2021*.
 
 ***
 
@@ -40,7 +40,7 @@ The online [data explorer](https://www.google.com/get/sunroof/data-explorer/) pr
 
 **GL Transmission Format (glTF)** ([khronos.org/gltf](https://www.khronos.org/gltf/)) is a royalty-free specification for the efficient transmission and loading of 3D scenes and models by applications. glTF minimizes both the size of 3D assets, and the runtime processing needed to unpack and use those assets. glTF defines an extensible, common publishing format for 3D content tools and services that streamlines authoring workflows and enables interoperable use of content across the industry.
 
-**Working group member**, *2017 to present.*
+**Working group member**, *2017…*
 
 ***
 
@@ -54,7 +54,7 @@ The online [data explorer](https://www.google.com/get/sunroof/data-explorer/) pr
 
 **A-Frame** ([aframe.io](https://aframe.io)) is a web framework for building virtual reality (VR) experiences. Originally from [Mozilla](https://mozilla.org/), A-Frame was developed to be an easy but powerful way to develop VR content. As an [independent open source project](https://github.com/aframevr/), A-Frame has grown to be one of the [largest and most welcoming VR communities](https://aframe.io/community/).
 
-**Core team**, *2017 to present.*
+**Core team**, *2017…*
 
 ***
 
