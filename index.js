@@ -9,7 +9,7 @@ const permalinks  = require('metalsmith-permalinks');
 const rss         = require('metalsmith-feed');
 const snippet     = require('metalsmith-snippet');
 
-if (process.env.VERCEL) {
+if (process.env.VERCEL_ENV === 'production') {
   // Don't rebuild on Vercel — 'photos/' submodule is large.
   console.info('Skipping rebuild in prod; using public/ folder.');
   process.exit(0);
