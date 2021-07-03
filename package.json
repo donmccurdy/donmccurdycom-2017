@@ -8,6 +8,7 @@
   },
   "scripts": {
     "build": "node index.js",
+    "deploy": "vercel --prod",
     "postversion": "git push && git push --tags"
   },
   "dependencies": {

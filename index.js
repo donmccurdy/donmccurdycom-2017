@@ -1,3 +1,4 @@
+const fs          = require('fs');
 const metalsmith  = require('metalsmith');
 const collections = require('metalsmith-collections');
 const layouts     = require('metalsmith-layouts');
@@ -8,7 +9,11 @@ const permalinks  = require('metalsmith-permalinks');
 const rss         = require('metalsmith-feed');
 const snippet     = require('metalsmith-snippet');
 
-const fs          = require('fs');
+if (process.env.VERCEL) {
+  // Don't rebuild on Vercel — 'photos/' submodule is large.
+  console.info('Skipping rebuild in prod; using public/ folder.');
+  process.exit(0);
+}
 
 const MEDIA_ROOT  = 'https://storage.googleapis.com/donmccurdy-photos';
 const media       = require('./photos/dist/media.json');
