@@ -1,5 +1,5 @@
 ---
-title: Scotland Bikepacking
+title: Scotland bikepacking
 slug: scotland-bikepacking
 date: 2021-03-07 22:10:00
 layout: post.html

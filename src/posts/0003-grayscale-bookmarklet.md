@@ -1,5 +1,5 @@
 ---
-title: Grayscale CSS and Bookmarklet
+title: Grayscale CSS and bookmarklet
 slug: grayscale-bookmarklet
 date: 2015-05-14 04:00:00
 layout: post.html

@@ -1,5 +1,5 @@
 ---
-title: On Immigration, Refugees, and Faith
+title: On immigration, refugees, and faith
 slug: on-immigration-refugees-and-faith
 date: 2017-01-29 01:38:00
 layout: post.html

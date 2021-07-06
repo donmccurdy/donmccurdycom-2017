@@ -1,5 +1,5 @@
 ---
-title: What Can a Technologist Do About Climate Change
+title: What can a technologist do about climate change
 slug: what-can-a-technologist-do-about-climate-change
 date: 2015-11-27 05:00:00
 layout: post.html

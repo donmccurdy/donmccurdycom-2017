@@ -1,5 +1,5 @@
 ---
-title: Color Management in three.js
+title: Color management in three.js
 slug: color-management-in-threejs
 date: 2020-06-17 09:23:00
 layout: post.html

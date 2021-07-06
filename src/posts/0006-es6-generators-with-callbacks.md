@@ -1,5 +1,5 @@
 ---
-title: Using ES6 Generators with Callback-based Libraries
+title: Using ES6 generators with callback-based libraries
 slug: es6-generators-with-callbacks
 date: 2015-08-07 04:00:00
 layout: post.html

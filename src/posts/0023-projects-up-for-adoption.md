@@ -1,5 +1,5 @@
 ---
-title: "Projects up for Adoption: A-Frame Extras and Physics System"
+title: "Projects up for adoption: A-Frame Extras and Physics System"
 slug: projects-up-for-adoption
 date: 2020-09-06 11:35:00
 layout: post.html

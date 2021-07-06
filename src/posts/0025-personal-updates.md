@@ -1,5 +1,5 @@
 ---
-title: Personal Updates, Leaving Google
+title: Personal updates & leaving Google
 slug: personal-updates-leaving-google
 date: 2021-07-06 15:26:00
 layout: post.html

@@ -1,5 +1,5 @@
 ---
-title: Creating animated glTF Characters with Mixamo and Blender
+title: Creating animated glTF characters with Mixamo and Blender
 slug: creating-animated-gltf-characters-with-mixamo-and-blender
 date: 2017-11-06 08:01:41
 layout: post.html

@@ -1,5 +1,5 @@
 ---
-title: Unpaid Work (Visualization)
+title: Unpaid work (visualization)
 slug: vis-makeover-monday-unpaid-work
 date: 2020-04-06 10:41:00
 layout: post.html

@@ -1,5 +1,5 @@
 ---
-title: Getting Involved in Open Source Software
+title: Getting involved in Open Source Software
 slug: getting-involved-in-open-source-software
 date: 2015-02-10 05:00:00
 layout: post.html

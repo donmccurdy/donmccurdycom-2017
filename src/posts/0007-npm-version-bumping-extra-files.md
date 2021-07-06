@@ -1,5 +1,5 @@
 ---
-title: NPM Version Bumping and Extra Files
+title: NPM version bumping and extra files
 slug: npm-version-bumping-extra-files
 date: 2016-05-05 04:00:00
 layout: post.html
